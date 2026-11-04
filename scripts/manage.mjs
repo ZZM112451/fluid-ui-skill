@@ -3,7 +3,7 @@ import {existsSync,readdirSync,lstatSync,readFileSync,writeFileSync,mkdirSync,cp
 import {resolve,join,dirname,relative} from 'node:path';import {fileURLToPath} from 'node:url';import {homedir} from 'node:os';
 const marker='.fluid-ui-install.json';
 export function files(root,prefix='',exclude=[]){return readdirSync(join(root,prefix),{withFileTypes:true}).flatMap(e=>{const p=join(prefix,e.name);if(!prefix&&exclude.includes(e.name))return [];if(e.isSymbolicLink())throw Error('拒绝符号链接');return e.isDirectory()?files(root,p,exclude):[p.replaceAll('\\','/')];});}
-export const projectFiles=()=>files('.','',['node_modules','.git','.eval-work','dist','.taste-skill','test-results','playwright-report']);
+export const projectFiles=()=>files('.','',['node_modules','.git','.eval-work','dist','.taste-skill','test-results','playwright-report']).filter(p=>!p.startsWith('examples/comparison/enhanced/screenshots/')&&!['examples/comparison/enhanced/browser-results.json','examples/comparison/enhanced/axe-results.json'].includes(p)&&!/^examples\/codex-smoke\/form-.*\.png$/.test(p));
 const sha=data=>createHash('sha256').update(data).digest('hex');
 function snapshot(root){return Object.fromEntries(files(root).filter(p=>p!==marker).sort().map(p=>[p,sha(readFileSync(join(root,p)))]));}
 export function verifyChecksum(data,expected){if(!/^[a-f0-9]{64}$/i.test(expected)||sha(data)!==expected.toLowerCase())throw Error('SHA256 校验失败');return true;}
