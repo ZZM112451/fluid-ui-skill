@@ -15,4 +15,9 @@ PowerShell install.ps1/publish.ps1 Parser: 无语法错误
 Gitleaks 8.30.1: 官方 ZIP SHA256 已核验，拟公开文件扫描无泄漏；提交后完整历史扫描见 gitleaks-history.json
 默认分支 main；远程仓库 https://github.com/ZZM112451/fluid-ui-skill 已创建为 Public，克隆与源码 ZIP 结构已验证。
 版本包 dist/fluid-ui-skill-v1.0.0.zip；SHA256 见同目录 SHA256SUMS。源码报告不嵌入自身包的哈希，避免循环变化。
-认证阻塞已由用户登录解决；正式版本等待 Windows/Ubuntu CI 与版本包分发复核。CI 链接及最终 Release 证据见报告与 Release 附件。
+认证阻塞已由用户登录解决；Windows/Ubuntu CI 均 success；v1.0.0 正式 Release 与实际在线安装、重复安装、受管卸载均已验证。
+发布提交 1fb2636d6a58228dcebced5f811cd956f31cdd27；主分支后续文档提交不移动发布标签。
+Release https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.0.0
+CI https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41774145035
+远程 ZIP SHA256 22de8671d571aafbf677340a6fb0f1864e8e992c6c0223dcf1070e75eef3db52
+完整验收见 publication-report.zh-CN.md 与 publication-verification.json。

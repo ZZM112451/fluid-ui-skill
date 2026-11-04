@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-04",
+  "repository": "https://github.com/ZZM112451/fluid-ui-skill",
+  "visibility": "PUBLIC",
+  "defaultBranch": "main",
+  "commit": "1fb2636d6a58228dcebced5f811cd956f31cdd27",
+  "tag": "v1.0.0",
+  "release": "https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.0.0",
+  "publishedAt": "2026-11-04T04:41:08Z",
+  "package": "fluid-ui-skill-v1.0.0.zip",
+  "sha256": "22de8671d571aafbf677340a6fb0f1864e8e992c6c0223dcf1070e75eef3db52",
+  "ci": {
+    "url": "https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41774145035",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "verify (ubuntu-latest)",
+        "conclusion": "success",
+        "url": "https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41774145035/job/126390436760"
+      },
+      {
+        "name": "verify (windows-latest)",
+        "conclusion": "success",
+        "url": "https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41774145035/job/126390436987"
+      }
+    ]
+  },
+  "tests": {
+    "countsAreSeparateScopes": true,
+    "independentEnhanced": 39,
+    "webAndTrial": 24,
+    "coreAndInstall": 24,
+    "codexGeneratedForm": 9
+  },
+  "distribution": {
+    "idempotentReinstall": true,
+    "remoteClone": true,
+    "releaseDownloadChecksum": true,
+    "userSkillPreserved": true,
+    "githubSourceZip": true,
+    "onlineReleaseInstall": true,
+    "managedUninstall": true
+  },
+  "security": {
+    "gitleaksVersion": "8.30.1",
+    "dependencyAuditFindings": 0,
+    "copyright": "2026 ZZM112451",
+    "license": "MIT",
+    "fullHistoryFindings": 0
+  },
+  "limitations": [
+    "Android Compose、Flutter、React Native 原生构建与设备未验证",
+    "Claude Code、Cursor、Gemini CLI 的宿主发现与任务未验证",
+    "macOS 安装未验证",
+    "20 条触发案例仅静态审查；另有真实显式调用和一个自动选择样本",
+    "无头性能与 axe 自动检测不代表真机 GPU 或人工读屏验收"
+  ]
+}

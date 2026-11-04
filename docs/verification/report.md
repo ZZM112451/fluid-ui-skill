@@ -1,12 +1,12 @@
 # Fluid UI v1 交付与验证报告
 
-日期 2026-11-04，项目状态：**源代码已公开，正式版本等待 CI 和分发复核，原生及跨 Agent 仍有未验证项**。本报告按已执行、静态检查、未验证与尚未完成区分。不存在 CI 或 Release 成功的推定，最终分发证据见 Release 附件。
+日期 2026-11-04，项目状态：**v1.0.0 已正式发布，原生及跨 Agent 仍有未验证项**。本报告按已执行、静态检查、未验证与尚未完成区分。[最终发布验收](publication-report.zh-CN.md) 与 [机器可读证据](publication-verification.json) 已从 Release 下载并核验一致。固定 tag 内的本报告是发布准备快照；主分支此页记录发布后的实际结果。
 
 ## 阶段状态
 | 阶段 | 状态 | 已执行 | 未完成或未验证 |
 |---|---|---|---|
 | P0 核心可用 | 已完成主要门槛 | Skill、四风格、20 模式、决策、配置、用户级安装、真实显式调用和自动选择样本、Web 演示 | 20 条触发用例未逐条实测；完整读屏/真机与穷尽视觉回归未验证 |
-| P1 工程发布 | 发布验收进行中 | MIT、双语说明、安装更新保护、版本包、安全检查、Public 仓库、main 推送、远程文件/克隆/源码 ZIP 复核 | 正式 Release 等待 CI；移动端 SDK 环境缺失 |
+| P1 工程发布 | 可用环境发布验收已完成 | MIT、双语说明、安装更新保护、版本包、完整历史扫描、Public 仓库、Windows/Ubuntu CI、正式 Release、远程下载校验与试装 | 原生移动端 SDK 和设备环境缺失；macOS 未验证 |
 | P2 跨 Agent | 文档完成，运行未验证 | 核对四 Agent 官方目录、调用与更新方式，通用核心与专属元数据隔离 | Claude 启动器损坏，Cursor/Gemini 不可用，未进行安装或调用 |
 
 ## Skill 信息
@@ -26,7 +26,7 @@ Windows，Node.js 24.16.0，Codex CLI 0.164.0，Playwright 1.58.2，Chromium 缓
 | 增强独立样例 | 独立浏览器记录 | 39 项通过，五页与试运行前后共七页 axe 0 违规 |
 | 五任务共同对照 | `node scripts/compare.mjs` | 见 [对照报告](comparison.md)，不宣称全面提升 |
 | bash | Git for Windows 语法检查及 Ubuntu CI Release 安装测试 | 正常/重复/校验失败/版本冲突/路径穿越五项在 Ubuntu 已通过；macOS 未验证 |
-| CI | [GitHub Actions](https://github.com/ZZM112451/fluid-ui-skill/actions) | 首次 Ubuntu 23/24 浏览器通过；弹窗测试异步竞态已修正，完整重跑中 |
+| CI | [发布源码完整 CI](https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41774145035) | Windows/Ubuntu 均 success，每组 24 项核心/安装和 24 项浏览器/试运行测试通过 |
 | 依赖 | `npm audit` | 升级 fflate 0.8.2→0.8.3 后 0 漏洞 |
 
 Windows Release 测试使用真实 ZIP，覆盖正常、重复、SHA256 错误、内外版本不一致、路径穿越拒绝。管理器覆盖未受管目录、用户修改/额外文件、升级降级确认、备份、暂存失败保留旧版本。交换后的 rename 恢复分支和真实权限拒绝未单独注入验证，不能称全分支已测。网络下载失败行为有错误退出路径，但未把离线本地 ZIP 测试称为真实 GitHub Release 下载测试。
@@ -45,10 +45,14 @@ Gitleaks 8.30.1 从官方 Release 下载并核对 SHA256。对拟公开文件的
 
 仓库 [ZZM112451/fluid-ui-skill](https://github.com/ZZM112451/fluid-ui-skill) 已实际创建并核验为 Public，默认分支 main；GitHub API 已将根 LICENSE 识别为 MIT。用户完成 gh 本机认证后，已正常推送并读取远程 Skill、安装说明和验证报告，真实克隆及 GitHub 默认分支源码 ZIP 均验证根目录正确。没有强推或覆盖既有历史。
 
-首次 [CI](https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41773558500) 的 Ubuntu 浏览器测试暴露弹窗 close 事件与测试直接改写 DOM 的竞态，未作正式发布。改为等待真实创建和保存结果后重开取消，修复提交 a037853326f13c36e3905951241823586c628cf9。[第二次 CI](https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41773841458) 暴露同毫秒升级/降级生成相同备份名的问题；新增固定时间回归后使用 timestamp+UUID 保留独立备份，本地核心测试 24/24 通过。最终 Release 必须等 Windows/Ubuntu 均成功，再创建 tag、上传 ZIP/SHA256 并下载验证。后续正常提交使用已有 origin；[首次发布辅助脚本](../../scripts/publish.ps1) 对非空仓库停止，避免覆盖。
+首次 [CI](https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41773558500) 的 Ubuntu 浏览器测试暴露弹窗 close 事件与测试直接改写 DOM 的竞态，未作正式发布。改为等待真实创建和保存结果后重开取消，修复提交 a037853326f13c36e3905951241823586c628cf9。[第二次 CI](https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41773841458) 暴露同毫秒升级/降级生成相同备份名的问题；新增固定时间回归后使用 timestamp+UUID 保留独立备份。[第三次完整 CI](https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41774145035) 的 Windows/Ubuntu 均成功，随后才创建正式版本。
+
+正式 [v1.0.0 Release](https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.0.0) 已发布，固定源码提交 `1fb2636d6a58228dcebced5f811cd956f31cdd27`。远程 ZIP SHA256 为 `22de8671d571aafbf677340a6fb0f1864e8e992c6c0223dcf1070e75eef3db52`。已真实下载并比对 SHA256SUMS；使用该提交下载且内容一致的安装脚本完成 Release 在线安装、同版本重复安装 unchanged、受管卸载。试装目标是隔离测试项目，原用户级 Skill modified=false。GitHub tag 源码 ZIP 和最终克隆也已核验结构与提交。报告和 JSON 验收附件均已重新下载比对哈希。
+
+后续正常提交使用已有 origin；[首次发布辅助脚本](../../scripts/publish.ps1) 对非空仓库停止，避免覆盖。主分支可继续记录文档证据，不移动已发布 tag。
 
 ## 下载 更新和使用
-已验证 GitHub 克隆与源码 ZIP；版本包入口为 [Releases](https://github.com/ZZM112451/fluid-ui-skill/releases)。版本化 Release 的真实创建、下载校验和安装证据以该 Release 附件为准，不将源码 ZIP 当版本包。升级固定版本+SHA256，先 diff/备份和确认；失败保留旧版；不兼容配置停止写入。跨 Agent 真实状态见 [兼容矩阵](../compatibility.md)。
+已验证 GitHub 克隆、tag 源码 ZIP 与 [v1.0.0 版本包](https://github.com/ZZM112451/fluid-ui-skill/releases/download/v1.0.0/fluid-ui-skill-v1.0.0.zip)，[SHA256SUMS](https://github.com/ZZM112451/fluid-ui-skill/releases/download/v1.0.0/SHA256SUMS) 可单独下载。源码 ZIP 与版本包根目录不同，分别按安装指南处理。升级固定版本+SHA256，先 diff/备份和确认；失败保留旧版；不兼容配置停止写入。跨 Agent 真实状态见 [兼容矩阵](../compatibility.md)。
 
 三个可直接复制的 Codex 示例：
 ```text
@@ -57,4 +61,4 @@ Gitleaks 8.30.1 从官方 Release 下载并核对 SHA256。对拟公开文件的
 使用 $fluid-ui 审查 Compose 底部导航与分步弹窗，优先 Material 3 原生能力；明确区分编译验证和真机未验证。
 ```
 
-后续工作：完成正式版本分发验收；在可用原生与其他 Agent 环境逐个测试；补充人工读屏与更多独立触发样本。需求范围冻结为本任务书 v1，不因本次局限新增无关功能。
+后续未完成工作：在可用原生与其他 Agent 环境逐个测试；补充人工读屏、macOS 安装和更多独立触发样本。需求范围冻结为本任务书 v1，不因本次局限新增无关功能。
