@@ -1,0 +1,362 @@
+{
+  "date": "2026-11-04",
+  "conditions": "同一主会话模型继承；独立上下文；相同需求，独立实现；同一 Chromium、数据类型、视口及 reduced-motion；细节数据和实现内容不完全相同，不做严格因果推断",
+  "records": [
+    {
+      "group": "baseline",
+      "task": "form",
+      "sourceBytes": 4806,
+      "externalDependencies": 0,
+      "axeViolations": [],
+      "overflow": [
+        {
+          "width": 320,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "overflow": false
+        }
+      ],
+      "consoleErrors": [],
+      "findings": {
+        "buttonCount": 2,
+        "labeledInputs": true,
+        "reducedAnimations": 0,
+        "tokenCount": 39
+      },
+      "behavior": [
+        {
+          "title": "无效输入不提交",
+          "result": "pass"
+        },
+        {
+          "title": "请求失败保留输入",
+          "result": "pass"
+        },
+        {
+          "title": "取消后无迟到成功",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "group": "baseline",
+      "task": "navigation",
+      "sourceBytes": 4477,
+      "externalDependencies": 0,
+      "axeViolations": [],
+      "overflow": [
+        {
+          "width": 320,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "overflow": false
+        }
+      ],
+      "consoleErrors": [],
+      "findings": {
+        "buttonCount": 3,
+        "labeledInputs": true,
+        "reducedAnimations": 0,
+        "tokenCount": 39
+      },
+      "behavior": [
+        {
+          "title": "导航保持草稿",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "group": "baseline",
+      "task": "sheet",
+      "sourceBytes": 4907,
+      "externalDependencies": 0,
+      "axeViolations": [],
+      "overflow": [
+        {
+          "width": 320,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "overflow": false
+        }
+      ],
+      "consoleErrors": [],
+      "findings": {
+        "buttonCount": 4,
+        "labeledInputs": true,
+        "reducedAnimations": 0,
+        "tokenCount": 39
+      },
+      "behavior": [
+        {
+          "title": "分步弹窗与退出焦点",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "group": "baseline",
+      "task": "data",
+      "sourceBytes": 4694,
+      "externalDependencies": 0,
+      "axeViolations": [],
+      "overflow": [
+        {
+          "width": 320,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "overflow": false
+        }
+      ],
+      "consoleErrors": [],
+      "findings": {
+        "buttonCount": 4,
+        "labeledInputs": true,
+        "reducedAnimations": 0,
+        "tokenCount": 39
+      },
+      "behavior": [
+        {
+          "title": "筛选与完成操作一致",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "group": "baseline",
+      "task": "interactive",
+      "sourceBytes": 4173,
+      "externalDependencies": 0,
+      "axeViolations": [],
+      "overflow": [
+        {
+          "width": 320,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "overflow": false
+        }
+      ],
+      "consoleErrors": [],
+      "findings": {
+        "buttonCount": 0,
+        "labeledInputs": true,
+        "reducedAnimations": 0,
+        "tokenCount": 39
+      },
+      "behavior": [
+        {
+          "title": "搜索后保留展开输入",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "group": "enhanced",
+      "task": "form",
+      "sourceBytes": 6361,
+      "externalDependencies": 0,
+      "axeViolations": [],
+      "overflow": [
+        {
+          "width": 320,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "overflow": false
+        }
+      ],
+      "consoleErrors": [],
+      "findings": {
+        "buttonCount": 2,
+        "labeledInputs": true,
+        "reducedAnimations": 0,
+        "tokenCount": 45
+      },
+      "behavior": [
+        {
+          "title": "无效输入不提交",
+          "result": "pass"
+        },
+        {
+          "title": "请求失败保留输入",
+          "result": "pass"
+        },
+        {
+          "title": "取消后无迟到成功",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "group": "enhanced",
+      "task": "navigation",
+      "sourceBytes": 4733,
+      "externalDependencies": 0,
+      "axeViolations": [],
+      "overflow": [
+        {
+          "width": 320,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "overflow": false
+        }
+      ],
+      "consoleErrors": [],
+      "findings": {
+        "buttonCount": 3,
+        "labeledInputs": true,
+        "reducedAnimations": 0,
+        "tokenCount": 45
+      },
+      "behavior": [
+        {
+          "title": "导航保持草稿",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "group": "enhanced",
+      "task": "sheet",
+      "sourceBytes": 5602,
+      "externalDependencies": 0,
+      "axeViolations": [],
+      "overflow": [
+        {
+          "width": 320,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "overflow": false
+        }
+      ],
+      "consoleErrors": [],
+      "findings": {
+        "buttonCount": 4,
+        "labeledInputs": true,
+        "reducedAnimations": 0,
+        "tokenCount": 45
+      },
+      "behavior": [
+        {
+          "title": "分步弹窗与退出焦点",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "group": "enhanced",
+      "task": "data",
+      "sourceBytes": 5386,
+      "externalDependencies": 0,
+      "axeViolations": [],
+      "overflow": [
+        {
+          "width": 320,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "overflow": false
+        }
+      ],
+      "consoleErrors": [],
+      "findings": {
+        "buttonCount": 3,
+        "labeledInputs": true,
+        "reducedAnimations": 0,
+        "tokenCount": 45
+      },
+      "behavior": [
+        {
+          "title": "筛选与完成操作一致",
+          "result": "pass"
+        }
+      ]
+    },
+    {
+      "group": "enhanced",
+      "task": "interactive",
+      "sourceBytes": 4973,
+      "externalDependencies": 0,
+      "axeViolations": [],
+      "overflow": [
+        {
+          "width": 320,
+          "overflow": false
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 1280,
+          "overflow": false
+        }
+      ],
+      "consoleErrors": [],
+      "findings": {
+        "buttonCount": 0,
+        "labeledInputs": true,
+        "reducedAnimations": 0,
+        "tokenCount": 45
+      },
+      "behavior": [
+        {
+          "title": "搜索后保留展开输入",
+          "result": "pass"
+        }
+      ]
+    }
+  ]
+}

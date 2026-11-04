@@ -1,0 +1,18 @@
+本地执行记录
+日期 2026-11-04
+环境 Windows / Node 24.16.0 / Codex CLI 0.164.0 / Playwright 1.58.2
+npm test: 23 passed, 0 failed
+npm run test:web: 24 passed, 0 failed
+node scripts/compare.mjs: 基线 7/7、增强 7/7 共同状态用例通过；十页 axe 0 violations；320/390/1280 页面不溢出
+examples/codex-smoke 中 node verify.cjs: 9 passed, 0 failed / 本机 Edge Chromium 156.0.4314.58
+独立增强实验: 39/39；五页及试运行前后七页 axe 0 violations
+quick_validate.py skills/fluid-ui: Skill is valid!
+node scripts/validate.mjs: 结构/链接/配置通过
+npm audit --audit-level=moderate: 0 vulnerabilities
+node scripts/manage.mjs install --agent codex: unchanged / 1.0.0
+bash -n scripts/install.sh: 通过（Git for Windows），未执行 macOS/Linux 真机安装
+PowerShell install.ps1/publish.ps1 Parser: 无语法错误
+Gitleaks 8.30.1: 官方 ZIP SHA256 已核验，拟公开文件扫描无泄漏；提交后完整历史扫描见 gitleaks-history.json
+本地分支 main；最终提交由 git log -1 读取。当前没有远程仓库、CI URL 或 Release。
+版本包 dist/fluid-ui-skill-v1.0.0.zip；SHA256 见同目录 SHA256SUMS。源码报告不嵌入自身包的哈希，避免循环变化。
+发布阻塞: gh auth status 未登录；用户已获知最小认证操作。

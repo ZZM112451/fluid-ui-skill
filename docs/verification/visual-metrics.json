@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-04",
+  "styleThemes": [
+    {
+      "style": "Minimal",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "style": "Minimal",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "style": "Glass",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "style": "Glass",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "style": "Material 3",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "style": "Material 3",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "style": "Tech",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "style": "Tech",
+      "theme": "dark",
+      "violations": []
+    }
+  ],
+  "font200PercentPageOverflow": false,
+  "performanceSample": {
+    "samples": 89,
+    "p50Ms": 6.099999999999966,
+    "p95Ms": 6.199999999999996,
+    "over25Ms": 0,
+    "heapBytes": 42806142,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.0.0 Safari/537.36",
+    "context": "无头 Chromium 空闲页面采样，非真机/GPU或交互性能保证"
+  },
+  "interactionSample": {
+    "samples": 89,
+    "themeToggles": 6,
+    "p50Ms": 6.099999999999909,
+    "p95Ms": 6.2000000000000455,
+    "over25Ms": 0,
+    "longTasksOver50Ms": [],
+    "heapBytes": 42914913,
+    "context": "无头浏览器连续主题切换，未测绘制层/GPU/真机"
+  }
+}

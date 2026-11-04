@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>邮件订阅</title>
+  <style>
+    :root { color-scheme: light dark; --background:#f5f6f3; --surface:#fff; --text:#192d25; --muted:#53665c; --accent:#166447; --on-accent:#fff; --border:#73877a; --error:#a32929; --fast:120ms; font-family:system-ui,sans-serif; color:var(--text); background:var(--background); }
+    * { box-sizing:border-box; }
+    body { margin:0; padding: max(24px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); min-block-size:100svh; display:grid; place-items:center; }
+    main { inline-size:100%; max-inline-size:448px; padding:32px; background:var(--surface); border:1px solid var(--border); border-radius:16px; }
+    h1 { margin:0 0 16px; font-size:28px; line-height:1.3; letter-spacing:-.03em; }
+    p { margin:0; line-height:1.6; overflow-wrap:anywhere; }
+    .intro { color:var(--muted); margin-block-end:24px; }
+    label { display:block; font-weight:600; margin-block-end:8px; }
+    input[type=email] { inline-size:100%; min-inline-size:0; min-block-size:48px; padding:8px 16px; border:1px solid var(--border); border-radius:8px; font:inherit; color:var(--text); background:var(--surface); }
+    input[aria-invalid=true] { border-color:var(--error); }
+    .hint { margin-block-start:8px; color:var(--muted); font-size:14px; }
+    .field-error { color:var(--error); margin-block-start:8px; font-size:14px; }
+    .simulation { display:flex; align-items:flex-start; gap:8px; margin-block:24px; font-weight:400; line-height:1.5; cursor:pointer; }
+    input[type=checkbox] { accent-color:var(--accent); inline-size:24px; block-size:24px; margin:0; flex-shrink:0; }
+    .actions { display:flex; flex-wrap:wrap; gap:8px; }
+    button { min-block-size:48px; padding:8px 24px; border:1px solid var(--border); border-radius:8px; font:inherit; font-weight:600; background:var(--surface); color:var(--text); cursor:pointer; }
+    button[type=submit] { flex:1; background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
+    button:active:not(:disabled) { opacity:.8; }
+    button:disabled { cursor:wait; opacity:.65; }
+    :focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    .feedback { margin-block-start:24px; border-inline-start:3px solid var(--accent); padding-inline-start:16px; }
+    .feedback[data-state=error] { border-color:var(--error); }
+    .note { margin-block-start:24px; font-size:14px; color:var(--muted); }
+    [hidden] { display:none !important; }
+    @media(prefers-color-scheme:dark) { :root { --background:#111a15; --surface:#19251e; --text:#edf4ef; --muted:#b5c6ba; --accent:#86d5a7; --on-accent:#102b1c; --border:#7f9788; --error:#ffabab; } }
+    @media(max-width:360px) { main { padding:24px 16px; } }
+    @media(prefers-reduced-motion:no-preference) { button { transition:opacity var(--fast) ease; } }
+    @media(forced-colors:active) { :focus-visible { outline-color:Highlight; } button[type=submit] { border:2px solid ButtonText; } }
+  </style>
+</head>
+<body>
+  <main aria-labelledby="heading">
+    <h1 id="heading">好内容，寄给你。</h1>
+    <p class="intro">订阅每月精选邮件，留一点时间给值得读的内容。</p>
+    <form novalidate aria-label="邮件订阅" aria-busy="false">
+      <label for="email">电子邮箱</label>
+      <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-hint email-error" aria-invalid="false" placeholder="you@example.com">
+      <p class="hint" id="email-hint">请输入你希望接收邮件的地址。</p>
+      <p class="field-error" id="email-error" aria-live="polite"></p>
+      <label class="simulation" for="simulate"><input id="simulate" type="checkbox"><span>模拟本次提交失败</span></label>
+      <div class="actions">
+        <button type="submit" id="submit">订阅邮件</button>
+        <button type="button" id="cancel" hidden>取消提交</button>
+      </div>
+    </form>
+    <div class="feedback" id="feedback" data-state="idle" role="status" aria-live="polite" aria-atomic="true"><p id="message">准备好后，填写邮箱即可开始。</p></div>
+    <p class="note">这是本地交互演示，不会发送或保存邮箱，也不会实际订阅。</p>
+  </main>
+  <script>
+    const form = document.querySelector('form');
+    const email = document.querySelector('#email');
+    const simulate = document.querySelector('#simulate');
+    const submit = document.querySelector('#submit');
+    const cancel = document.querySelector('#cancel');
+    const feedback = document.querySelector('#feedback');
+    const message = document.querySelector('#message');
+    const fieldError = document.querySelector('#email-error');
+    let generation = 0;
+    let controller = null;
+    let state = 'idle';
+
+    function render(next, text) {
+      state = next;
+      const busy = next === 'loading';
+      form.setAttribute('aria-busy', String(busy));
+      email.readOnly = busy;
+      simulate.disabled = busy;
+      submit.disabled = busy;
+      submit.textContent = busy ? '正在提交…' : next === 'error' ? '重试订阅' : next === 'success' ? '再次演示订阅' : '订阅邮件';
+      cancel.hidden = !busy;
+      feedback.dataset.state = next;
+      message.textContent = text;
+    }
+
+    function validate() {
+      const error = email.validity.valueMissing ? '请填写电子邮箱。' : email.validity.typeMismatch ? '请输入有效的邮箱，例如 you@example.com。' : '';
+      email.setAttribute('aria-invalid', String(Boolean(error)));
+      fieldError.textContent = error;
+      return !error;
+    }
+
+    function mockSubscribe(shouldFail, signal) {
+      return new Promise((resolve, reject) => {
+        const timer = setTimeout(() => {
+          signal.removeEventListener('abort', abort);
+          shouldFail ? reject(new Error('模拟失败')) : resolve();
+        }, 1200);
+        function abort() {
+          clearTimeout(timer);
+          reject(new DOMException('已取消', 'AbortError'));
+        }
+        signal.addEventListener('abort', abort, { once:true });
+      });
+    }
+
+    email.addEventListener('blur', () => { if (!email.readOnly) validate(); });
+    email.addEventListener('input', () => {
+      email.setAttribute('aria-invalid', 'false');
+      fieldError.textContent = '';
+      if (state !== 'idle' && state !== 'loading') render('idle', '邮箱已更新，可以重新提交。');
+    });
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (state === 'loading') return;
+      if (!validate()) { email.focus(); return; }
+      const current = ++generation;
+      controller = new AbortController();
+      const signal = controller.signal;
+      render('loading', '正在模拟提交，预计需要片刻。你可以随时取消。');
+      // 主按钮禁用前后均把焦点交给可用的取消操作。
+      cancel.focus();
+      try {
+        await mockSubscribe(simulate.checked, signal);
+        if (current !== generation || signal.aborted) return;
+        render('success', '演示订阅成功！本次未发送邮件，你可以修改邮箱后再次体验。');
+      } catch (error) {
+        if (current !== generation || signal.aborted) return;
+        render('error', '模拟提交失败，邮箱已保留。取消勾选“模拟本次提交失败”后，点击“重试订阅”恢复。');
+      } finally {
+        if (current === generation && !signal.aborted) {
+          controller = null;
+          submit.focus();
+        }
+      }
+    });
+    function cancelRequest() {
+      if (state !== 'loading') return;
+      ++generation;
+      controller?.abort();
+      controller = null;
+      render('cancelled', '已取消提交，邮箱已保留。你可以修改或重新提交。');
+      submit.focus();
+    }
+    cancel.addEventListener('click', cancelRequest);
+    form.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && state === 'loading') { event.preventDefault(); cancelRequest(); }
+    });
+    window.addEventListener('pagehide', () => {
+      ++generation;
+      controller?.abort();
+      controller = null;
+      if (state === 'loading') render('cancelled', '提交已因离开页面而取消，可以重新提交。');
+    });
+  </script>
+</body>
+</html>

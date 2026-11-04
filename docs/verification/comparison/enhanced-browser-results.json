@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-04",
+  "environment": "Windows / Chromium 1223 / Playwright",
+  "type": "真实浏览器执行",
+  "pass": 39,
+  "fail": 0,
+  "results": [
+    {
+      "name": "form 320px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "form 390px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "form 1280px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "form 减少动态效果",
+      "result": "pass"
+    },
+    {
+      "name": "form 无运行异常",
+      "result": "pass"
+    },
+    {
+      "name": "navigation 320px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "navigation 390px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "navigation 1280px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "navigation 减少动态效果",
+      "result": "pass"
+    },
+    {
+      "name": "navigation 无运行异常",
+      "result": "pass"
+    },
+    {
+      "name": "sheet 320px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "sheet 390px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "sheet 1280px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "sheet 减少动态效果",
+      "result": "pass"
+    },
+    {
+      "name": "sheet 无运行异常",
+      "result": "pass"
+    },
+    {
+      "name": "data 320px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "data 390px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "data 1280px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "data 减少动态效果",
+      "result": "pass"
+    },
+    {
+      "name": "data 无运行异常",
+      "result": "pass"
+    },
+    {
+      "name": "interactive 320px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "interactive 390px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "interactive 1280px 无页面横向溢出",
+      "result": "pass"
+    },
+    {
+      "name": "interactive 减少动态效果",
+      "result": "pass"
+    },
+    {
+      "name": "interactive 无运行异常",
+      "result": "pass"
+    },
+    {
+      "name": "表单无效输入关联错误并聚焦",
+      "result": "pass"
+    },
+    {
+      "name": "表单失败不成功且保留输入",
+      "result": "pass"
+    },
+    {
+      "name": "表单取消无迟到成功",
+      "result": "pass"
+    },
+    {
+      "name": "表单取消后恢复提交成功",
+      "result": "pass"
+    },
+    {
+      "name": "表单输入恢复清除过期结果",
+      "result": "pass"
+    },
+    {
+      "name": "请求中修改邮箱取消过期结果",
+      "result": "pass"
+    },
+    {
+      "name": "导航保留草稿状态",
+      "result": "pass"
+    },
+    {
+      "name": "弹窗支持两步与返回保留内容",
+      "result": "pass"
+    },
+    {
+      "name": "弹窗 Escape 关闭恢复焦点",
+      "result": "pass"
+    },
+    {
+      "name": "筛选及业务状态计数一致",
+      "result": "pass"
+    },
+    {
+      "name": "搜索与折叠保留输入",
+      "result": "pass"
+    },
+    {
+      "name": "试运行 before 取消与失败业务回归",
+      "result": "pass"
+    },
+    {
+      "name": "试运行 after 取消与失败业务回归",
+      "result": "pass"
+    },
+    {
+      "name": "试运行 after 输入恢复清除过期结果",
+      "result": "pass"
+    }
+  ]
+}

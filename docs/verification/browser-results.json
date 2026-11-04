@@ -1,0 +1,914 @@
+{
+  "config": {
+    "configFile": "<repo>\\playwright.config.mjs",
+    "rootDir": "<repo>/tests/browser",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "<repo>/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "<repo>/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/verification/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": {
+      "command": "node scripts/serve.mjs",
+      "url": "http://127.0.0.1:4173/demo/",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "demo.spec.mjs",
+      "file": "demo.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "异步失败、取消及恢复",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2980,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:19:57.437Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-a8180d42782d0b482efe",
+          "file": "demo.spec.mjs",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "表单错误及恢复保留输入",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 251,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:00.675Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-5699c60595ec4aeefc84",
+          "file": "demo.spec.mjs",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "原生弹窗两步及焦点恢复",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 521,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:00.936Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-0537c8345a003169915c",
+          "file": "demo.spec.mjs",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "导航、展开卡及重复主题操作",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2896,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:01.469Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-07513d5a32dda30649d2",
+          "file": "demo.spec.mjs",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "Minimal 320px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 701,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:04.377Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-2ba91939032aaa7b7b3d",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Minimal 768px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 618,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:05.090Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-0830a3c73b0eb4e79a45",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Minimal 1440px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 620,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:05.718Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-0f5e4be74c3ee52daea8",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Glass 320px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 621,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:06.349Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-da7458e461e81bd0ecad",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Glass 768px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 624,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:06.978Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-d6f98db445b19a600fbf",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Glass 1440px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 614,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:07.612Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-7839d152869f21910afb",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Material 3 320px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 610,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:08.236Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-692116ae52cccb145600",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Material 3 768px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 615,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:08.856Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-d28fc3eaa6d3d1701bb9",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Material 3 1440px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 616,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:09.479Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-3ba38bdcdf4c954cd7b1",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Tech 320px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 626,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:10.103Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-23a7e799e09e406c45ee",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Tech 768px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 617,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:10.738Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-b3c7b578330022abd62e",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Tech 1440px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 607,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:11.363Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-23aa4ac2587ad2af4372",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "减少动态效果、高对比和 RTL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 220,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:11.980Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-428e07a311d261d35168",
+          "file": "demo.spec.mjs",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "无控制台错误及基础帧时间采样",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 565,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:12.210Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "frame-sample",
+                      "contentType": "application/json",
+                      "body": "eyJmcmFtZXMiOlsyLjkwMDAwMDAwMDAwMDAwNTcsNi4wOTk5OTk5OTk5OTk5OTQsNi4wOTk5OTk5OTk5OTk5OTQsNiw2LjEwMDAwMDAwMDAwMDAwODUsNiw2LjEwMDAwMDAwMDAwMDAwODUsNiw2LjI5OTk5OTk5OTk5OTk4Myw2LjIwMDAwMDAwMDAwMDAxNyw1Ljc5OTk5OTk5OTk5OTk4Myw2LDYuMzAwMDAwMDAwMDAwMDExLDUuOTAwMDAwMDAwMDAwMDA2LDUuODk5OTk5OTk5OTk5OTc3LDYuNDAwMDAwMDAwMDAwMDA2LDUuODAwMDAwMDAwMDAwMDExLDYuMDk5OTk5OTk5OTk5OTk0LDYsNi4wOTk5OTk5OTk5OTk5OTQsNiw2LjA5OTk5OTk5OTk5OTk5NCw2LjQwMDAwMDAwMDAwMDAwNiw1LjgwMDAwMDAwMDAwMDAxMSw2LDYuMDk5OTk5OTk5OTk5OTk0LDYsNiw2LjE5OTk5OTk5OTk5OTk4OSw2LDYuMTAwMDAwMDAwMDAwMDIzLDYsNi4zMDAwMDAwMDAwMDAwMTEsNS43OTk5OTk5OTk5OTk5NTQ1LDYuMTAwMDAwMDAwMDAwMDIzLDYuMzAwMDAwMDAwMDAwMDExLDUuODk5OTk5OTk5OTk5OTc3LDYsNiw2LjEwMDAwMDAwMDAwMDAyMyw2LDYuMzAwMDAwMDAwMDAwMDExLDUuODk5OTk5OTk5OTk5OTc3LDYsNi4xMDAwMDAwMDAwMDAwMjMsNi4wOTk5OTk5OTk5OTk5NjYsNiw2LjEwMDAwMDAwMDAwMDAyMyw2LjE5OTk5OTk5OTk5OTk4OSw1Ljg5OTk5OTk5OTk5OTk3Nyw2LjEwMDAwMDAwMDAwMDAyMyw2LjEwMDAwMDAwMDAwMDAyMyw2LjI5OTk5OTk5OTk5OTk1NDUsNS43MDAwMDAwMDAwMDAwNDU1LDYuMTk5OTk5OTk5OTk5OTg5LDUuODk5OTk5OTk5OTk5OTc3LDYuMTAwMDAwMDAwMDAwMDIzLDYuMDk5OTk5OTk5OTk5OTY2LDYuMTAwMDAwMDAwMDAwMDIzLDZdLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBIZWFkbGVzc0Nocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiIsImhlYXAiOjEzNjU0MDN9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-51ba6ddd1f9f57556b12",
+          "file": "demo.spec.mjs",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "完成后重开并取消弹窗不会重复创建",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 507,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:12.784Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-0b571ad230b8c76a821f",
+          "file": "demo.spec.mjs",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "页面进入 bfcache 再恢复仍可保存",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1071,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:13.300Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-ca2c113c71e49185db6e",
+          "file": "demo.spec.mjs",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "复制拒绝时不显示成功，降级关闭模糊",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 232,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:14.381Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-d871e04f33fb25d1528e",
+          "file": "demo.spec.mjs",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "滚动 FAB 和计时胶囊仍可操作",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 307,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:14.622Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-08ac95246614285b90bd",
+          "file": "demo.spec.mjs",
+          "line": 18,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "trial.spec.mjs",
+      "file": "trial.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "既有项目副本 before 保留失败与取消行为",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2148,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:14.972Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d75666131fb4757412bd-46a8c713c824ea169ae5",
+          "file": "trial.spec.mjs",
+          "line": 2,
+          "column": 41
+        },
+        {
+          "title": "既有项目副本 after 保留失败与取消行为",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2144,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T04:20:17.128Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d75666131fb4757412bd-cd43b664b5d572da806d",
+          "file": "trial.spec.mjs",
+          "line": 2,
+          "column": 41
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-04T04:19:56.249Z",
+    "duration": 23273.621,
+    "expected": 24,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

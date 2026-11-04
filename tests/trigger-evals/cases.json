@@ -1,0 +1,22 @@
+[
+ {"id":1,"prompt":"创建 Minimal Web 表单，强度 Subtle，保留输入与失败恢复","expected":true,"covers":"Minimal/Subtle/Web"},
+ {"id":2,"prompt":"用 Glass 和 Balanced 优化设置浮层","expected":true,"covers":"Glass/Balanced"},
+ {"id":3,"prompt":"用 Tech Expressive 设计工程监控页，但禁止闪烁","expected":true,"covers":"Tech/Expressive"},
+ {"id":4,"prompt":"用 Material 3 实现 Compose 底部导航","expected":true,"covers":"Material 3/Android"},
+ {"id":5,"prompt":"重构 Flutter 异步按钮，失败不能显示成功","expected":true,"covers":"Flutter/state"},
+ {"id":6,"prompt":"改进 React Native 搜索交互和键盘体验","expected":true,"covers":"RN/platform"},
+ {"id":7,"prompt":"保留已有品牌系统，只优化复制成功反馈","expected":true,"covers":"existing system/minimum scope"},
+ {"id":8,"prompt":"优化无动画的数据表布局与焦点顺序","expected":true,"covers":"no animation/a11y"},
+ {"id":9,"prompt":"将页面改为受控 Hybrid，明确混用边界","expected":true,"covers":"Hybrid"},
+ {"id":10,"prompt":"让底部弹窗适配键盘、RTL 和动态字体","expected":true,"covers":"responsive"},
+ {"id":11,"prompt":"修复主题动画快速切换时闪白","expected":true,"covers":"interruption"},
+ {"id":12,"prompt":"使用 $fluid-ui 改善表单错误和取消反馈","expected":true,"covers":"explicit invocation"},
+ {"id":13,"prompt":"实现 PostgreSQL 备份轮换脚本","expected":false,"covers":"backend"},
+ {"id":14,"prompt":"整理会议纪要并导出 Word","expected":false,"covers":"document"},
+ {"id":15,"prompt":"计算 123 乘以 456","expected":false,"covers":"arithmetic"},
+ {"id":16,"prompt":"修复服务端 API 的请求签名算法","expected":false,"covers":"backend security"},
+ {"id":17,"prompt":"翻译这篇文章","expected":false,"covers":"translation"},
+ {"id":18,"prompt":"只给 CSS 类名排序，不改变界面行为或样式","expected":false,"covers":"format-only boundary"},
+ {"id":19,"prompt":"更新 README 的安装日期","expected":false,"covers":"docs-only"},
+ {"id":20,"prompt":"检查磁盘文件大小并生成清单","expected":false,"covers":"filesystem"}
+]

@@ -1,0 +1,19 @@
+{
+  "name": "fluid-ui-skill",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:web": "playwright test",
+    "validate": "node scripts/validate.mjs",
+    "scan": "node scripts/scan.mjs",
+    "package": "node scripts/package.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.1",
+    "@playwright/test": "1.58.2",
+    "fflate": "0.8.3"
+  }
+}

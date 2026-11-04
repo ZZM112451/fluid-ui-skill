@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-04",
+  "environment": "Chromium 1223 / axe-core 4.11 / 390x900",
+  "results": [
+    {
+      "page": "form",
+      "violations": [],
+      "passes": 20,
+      "incomplete": 0
+    },
+    {
+      "page": "navigation",
+      "violations": [],
+      "passes": 17,
+      "incomplete": 0
+    },
+    {
+      "page": "sheet",
+      "violations": [],
+      "passes": 12,
+      "incomplete": 0
+    },
+    {
+      "page": "data",
+      "violations": [],
+      "passes": 22,
+      "incomplete": 2
+    },
+    {
+      "page": "interactive",
+      "violations": [],
+      "passes": 19,
+      "incomplete": 0
+    },
+    {
+      "page": "../trial/before",
+      "violations": [],
+      "passes": 21,
+      "incomplete": 0
+    },
+    {
+      "page": "../trial/after",
+      "violations": [],
+      "passes": 21,
+      "incomplete": 0
+    }
+  ]
+}

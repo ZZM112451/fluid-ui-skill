@@ -1,0 +1,13 @@
+node_modules/
+test-results/
+playwright-report/
+dist/
+.eval-work/
+.taste-skill/
+*.log
+.env*
+!.env.example
+examples/comparison/enhanced/screenshots/
+examples/comparison/enhanced/browser-results.json
+examples/comparison/enhanced/axe-results.json
+examples/codex-smoke/form-*.png
