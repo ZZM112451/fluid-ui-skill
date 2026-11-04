@@ -24,12 +24,12 @@ Glass、Material 3、Minimal、Tech 四风格与 20 模式保留。Liquid Glass 
 ## 实测结果
 - Node.js 24.16.0 / Windows / Codex CLI 0.164.0 / Playwright 1.58.2 / Chromium 148，本地 Edge 用于生成组件验证。
 - `npm test`：29/29（原 24 + 5 个 preset/兼容用例）。
-- `npm run test:web`：38/38（原 24 + 新 14）。包括实际剪贴板、失败/竞态、BFCache 恢复、320/390/768 明暗 axe、200% 字体/短窗口/RTL、减少动态效果。
+- `npm run test:web`：原 24 + 新 17，共 41 项，最终结果以 CI/发布附件为准。包括导航首帧无跳跃、实际剪贴板、失败/竞态、BFCache 恢复、滚动菜单锚点、遮罩关闭、320/390/768 明暗 axe、200% 字体/短窗口/RTL、减少动态效果。
 - `examples/liquid-generated` 中 `node verify.cjs`：9/9；单独调用新版 Skill 生成的组件，不混入工程 demo 的通过数。
 - 官方 skill-creator `quick_validate.py`：Skill is valid；核心文件低于 500 行，四风格与20模式结构未变。
 - [中间帧与性能采样](visual-metrics.json)，截图在 production/；原型截图在 reference/。样本只代表本机无头 Web，不代表真机 GPU 或移动平台性能。
 
-本地第一次测试发现计时器断言应等待真实时间更新而非假定恰好在 1200ms tick，改为观察状态。axe 发现页脚对比和 landmark，已修正。独立只读工程审查实际复现 BFCache 返回后复制反馈不复原，新增回归先失败再修复；离开时同时清理成功类、文字和计时器。没有忽略失败来发布。
+本地第一次测试发现计时器断言应等待真实时间更新而非假定恰好在 1200ms tick，改为观察状态。axe 发现页脚对比和 landmark，已修正。独立只读工程审查实际复现 BFCache 返回后复制反馈不复原，新增回归先失败再修复；离开时同时清理成功类、文字和计时器。发布前复核又发现内容滚动后菜单未跟随实际触发按钮；回归先复现 60px 偏移，再在滚动时重新定位。没有忽略失败来发布。
 
 ## 触发评测
 [真实日志摘要](trigger-evals.json) 使用隔离项目级新版，不提前覆盖用户级旧版。显式 `$fluid-ui` 实际读取新版并生成 ui.html/config；不含 Skill 名称的自然语言 UI 请求实际读取新版与预设/形变参考；纯后端反例未读。各一条独立上下文，不能外推为所有请求保证自动调用。

@@ -64,6 +64,768 @@
   },
   "suites": [
     {
+      "title": "demo.spec.mjs",
+      "file": "demo.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "异步失败、取消及恢复",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2925,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:52:54.366Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-a8180d42782d0b482efe",
+          "file": "demo.spec.mjs",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "表单错误及恢复保留输入",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 325,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:52:57.550Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-5699c60595ec4aeefc84",
+          "file": "demo.spec.mjs",
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "原生弹窗两步及焦点恢复",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 547,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:52:57.884Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-0537c8345a003169915c",
+          "file": "demo.spec.mjs",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "导航、展开卡及重复主题操作",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3172,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:52:58.441Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-07513d5a32dda30649d2",
+          "file": "demo.spec.mjs",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "Minimal 320px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1096,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:01.625Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-2ba91939032aaa7b7b3d",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Minimal 768px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 823,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:02.731Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-0830a3c73b0eb4e79a45",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Minimal 1440px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 754,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:03.569Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-0f5e4be74c3ee52daea8",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Glass 320px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 731,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:04.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-da7458e461e81bd0ecad",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Glass 768px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 841,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:05.075Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-d6f98db445b19a600fbf",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Glass 1440px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 829,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:05.927Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-7839d152869f21910afb",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Material 3 320px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 888,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:06.765Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-692116ae52cccb145600",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Material 3 768px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 958,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:07.667Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-d28fc3eaa6d3d1701bb9",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Material 3 1440px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 954,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:08.636Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-3ba38bdcdf4c954cd7b1",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Tech 320px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 679,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:09.600Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-23a7e799e09e406c45ee",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Tech 768px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 665,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:10.288Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-b3c7b578330022abd62e",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "Tech 1440px 布局及无障碍",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 675,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:10.961Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-23aa4ac2587ad2af4372",
+          "file": "demo.spec.mjs",
+          "line": 12,
+          "column": 94
+        },
+        {
+          "title": "减少动态效果、高对比和 RTL",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 305,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:11.643Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-428e07a311d261d35168",
+          "file": "demo.spec.mjs",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "无控制台错误及基础帧时间采样",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 585,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:11.959Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "frame-sample",
+                      "contentType": "application/json",
+                      "body": "eyJmcmFtZXMiOlstMS4wMDAwMDAwMDI5ODAyMjk0LDYuMDk5OTk5OTk5OTk5OTk0LDYuMTAwMDAwMDAwMDAwMDA4NSw2LDYsNi4wOTk5OTk5OTk5OTk5OTQsNi4wOTk5OTk5OTk5OTk5OTQsNi4wOTk5OTk5OTk5OTk5OTQsNiw2LDYuMTAwMDAwMDAwMDAwMDIzLDYuMDk5OTk5OTk5OTk5OTk0LDYsNi4wOTk5OTk5OTk5OTk5OTQsNi4wOTk5OTk5OTk5OTk5OTQsNiw2LjA5OTk5OTk5OTk5OTk5NCw2LDYuMTAwMDAwMDAwMDAwMDIzLDYuMDk5OTk5OTk5OTk5OTk0LDYsNi4wOTk5OTk5OTk5OTk5OTQsNiw2LjA5OTk5OTk5OTk5OTk5NCw2LjA5OTk5OTk5OTk5OTk5NCw2LDYuMTAwMDAwMDAwMDAwMDIzLDYuMDk5OTk5OTk5OTk5OTk0LDUuOTk5OTk5OTk5OTk5OTcyLDYuMTAwMDAwMDAwMDAwMDIzLDYsNi4xMDAwMDAwMDAwMDAwMjMsNi4wOTk5OTk5OTk5OTk5NjYsNiw2LjEwMDAwMDAwMDAwMDAyMyw2LjA5OTk5OTk5OTk5OTk2Niw2LDYuMTAwMDAwMDAwMDAwMDIzLDYsNi4xMDAwMDAwMDAwMDAwMjMsNi4wOTk5OTk5OTk5OTk5NjYsNi4xMDAwMDAwMDAwMDAwMjMsNS44OTk5OTk5OTk5OTk5NzcsNi4xMDAwMDAwMDAwMDAwMjMsNi4wOTk5OTk5OTk5OTk5NjYsNi4yMDAwMDAwMDAwMDAwNDU1LDUuODk5OTk5OTk5OTk5OTc3LDYuMTAwMDAwMDAwMDAwMDIzLDYsNi4wOTk5OTk5OTk5OTk5NjYsNiw2LjE5OTk5OTk5OTk5OTk4OSw2LDYuMTAwMDAwMDAwMDAwMDIzLDYsNi4xMDAwMDAwMDAwMDAwMjMsNiw2LDYuMTk5OTk5OTk5OTk5OTg5LDZdLCJ1c2VyQWdlbnQiOiJNb3ppbGxhLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBIZWFkbGVzc0Nocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiIsImhlYXAiOjEzNjU4NzV9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-51ba6ddd1f9f57556b12",
+          "file": "demo.spec.mjs",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "完成后重开并取消弹窗不会重复创建",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1472,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:12.554Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-0b571ad230b8c76a821f",
+          "file": "demo.spec.mjs",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "页面进入 bfcache 再恢复仍可保存",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1100,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:14.035Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-ca2c113c71e49185db6e",
+          "file": "demo.spec.mjs",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "复制拒绝时不显示成功，降级关闭模糊",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 500,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:15.144Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-d871e04f33fb25d1528e",
+          "file": "demo.spec.mjs",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "滚动 FAB 和计时胶囊仍可操作",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 366,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:15.653Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f2c97be9359f66d14dfa-08ac95246614285b90bd",
+          "file": "demo.spec.mjs",
+          "line": 18,
+          "column": 1
+        }
+      ]
+    },
+    {
       "title": "liquid-glass.spec.mjs",
       "file": "liquid-glass.spec.mjs",
       "column": 0,
@@ -85,12 +847,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2830,
+                  "duration": 2744,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:32.752Z",
+                  "startTime": "2026-11-04T09:53:16.049Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -101,6 +863,40 @@
           "id": "d768b1cbb7582410f9cb-627765ecb3706f439155",
           "file": "liquid-glass.spec.mjs",
           "line": 3,
+          "column": 1
+        },
+        {
+          "title": "导航高亮从当前呈现位置启动，不先跳到新按钮",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 902,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:18.801Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d768b1cbb7582410f9cb-2dd762eb41bd5d666be7",
+          "file": "liquid-glass.spec.mjs",
+          "line": 4,
           "column": 1
         },
         {
@@ -119,12 +915,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 371,
+                  "duration": 446,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:35.812Z",
+                  "startTime": "2026-11-04T09:53:19.713Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -134,7 +930,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-048d10f3adf32aeaa933",
           "file": "liquid-glass.spec.mjs",
-          "line": 4,
+          "line": 5,
           "column": 1
         },
         {
@@ -153,12 +949,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3805,
+                  "duration": 3976,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:36.192Z",
+                  "startTime": "2026-11-04T09:53:20.169Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -168,7 +964,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-3ec56244c17ec37d2ccf",
           "file": "liquid-glass.spec.mjs",
-          "line": 5,
+          "line": 6,
           "column": 1
         },
         {
@@ -187,12 +983,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4406,
+                  "duration": 4492,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:40.006Z",
+                  "startTime": "2026-11-04T09:53:24.157Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -202,7 +998,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-9823ca38a47c1b395e73",
           "file": "liquid-glass.spec.mjs",
-          "line": 6,
+          "line": 7,
           "column": 1
         },
         {
@@ -221,12 +1017,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2798,
+                  "duration": 2873,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:44.425Z",
+                  "startTime": "2026-11-04T09:53:28.664Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -236,7 +1032,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-e06e810ad5480a127946",
           "file": "liquid-glass.spec.mjs",
-          "line": 7,
+          "line": 8,
           "column": 1
         },
         {
@@ -255,12 +1051,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1432,
+                  "duration": 1972,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:47.242Z",
+                  "startTime": "2026-11-04T09:53:31.548Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -270,7 +1066,75 @@
           ],
           "id": "d768b1cbb7582410f9cb-022cf0a778a459295fc4",
           "file": "liquid-glass.spec.mjs",
-          "line": 8,
+          "line": 9,
+          "column": 1
+        },
+        {
+          "title": "内容滚动后菜单仍锚定实际触发按钮",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1476,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:33.531Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d768b1cbb7582410f9cb-ac7091e10afbd9b9c6af",
+          "file": "liquid-glass.spec.mjs",
+          "line": 10,
+          "column": 1
+        },
+        {
+          "title": "保留原型的点击遮罩关闭弹窗行为",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1803,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:35.016Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d768b1cbb7582410f9cb-906258ee8fe207b59696",
+          "file": "liquid-glass.spec.mjs",
+          "line": 11,
           "column": 1
         },
         {
@@ -289,12 +1153,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1425,
+                  "duration": 1481,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:48.689Z",
+                  "startTime": "2026-11-04T09:53:36.834Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -304,7 +1168,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-1277ffdff913001fe1e0",
           "file": "liquid-glass.spec.mjs",
-          "line": 9,
+          "line": 12,
           "column": 1
         },
         {
@@ -323,12 +1187,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 241,
+                  "duration": 472,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:50.125Z",
+                  "startTime": "2026-11-04T09:53:38.330Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -338,7 +1202,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-f145fa3aee669b817f06",
           "file": "liquid-glass.spec.mjs",
-          "line": 10,
+          "line": 13,
           "column": 1
         },
         {
@@ -357,12 +1221,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1093,
+                  "duration": 1200,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:50.377Z",
+                  "startTime": "2026-11-04T09:53:38.818Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -372,7 +1236,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-735258f5a2f07f3e5cc7",
           "file": "liquid-glass.spec.mjs",
-          "line": 11,
+          "line": 14,
           "column": 1
         },
         {
@@ -391,12 +1255,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 214,
+                  "duration": 268,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:51.479Z",
+                  "startTime": "2026-11-04T09:53:40.033Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -406,7 +1270,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-eca99bd6e234efda62c5",
           "file": "liquid-glass.spec.mjs",
-          "line": 12,
+          "line": 15,
           "column": 1
         },
         {
@@ -425,12 +1289,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 326,
+                  "duration": 510,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:51.701Z",
+                  "startTime": "2026-11-04T09:53:40.326Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -440,7 +1304,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-8770378d85d974f2d1dd",
           "file": "liquid-glass.spec.mjs",
-          "line": 13,
+          "line": 16,
           "column": 1
         },
         {
@@ -459,12 +1323,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 900,
+                  "duration": 1687,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:52.036Z",
+                  "startTime": "2026-11-04T09:53:40.847Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -474,7 +1338,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-9f03d90fc2e017a7bab7",
           "file": "liquid-glass.spec.mjs",
-          "line": 14,
+          "line": 17,
           "column": 34
         },
         {
@@ -493,12 +1357,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 885,
+                  "duration": 1366,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:52.944Z",
+                  "startTime": "2026-11-04T09:53:42.545Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -508,7 +1372,7 @@
           ],
           "id": "d768b1cbb7582410f9cb-697f5ba6434e72926dc8",
           "file": "liquid-glass.spec.mjs",
-          "line": 14,
+          "line": 17,
           "column": 34
         },
         {
@@ -527,12 +1391,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 896,
+                  "duration": 1662,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-04T09:27:53.837Z",
+                  "startTime": "2026-11-04T09:53:43.928Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -542,17 +1406,93 @@
           ],
           "id": "d768b1cbb7582410f9cb-de5ab556cb6fd5973ffd",
           "file": "liquid-glass.spec.mjs",
-          "line": 14,
+          "line": 17,
           "column": 34
+        }
+      ]
+    },
+    {
+      "title": "trial.spec.mjs",
+      "file": "trial.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "既有项目副本 before 保留失败与取消行为",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2622,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:45.632Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d75666131fb4757412bd-46a8c713c824ea169ae5",
+          "file": "trial.spec.mjs",
+          "line": 2,
+          "column": 41
+        },
+        {
+          "title": "既有项目副本 after 保留失败与取消行为",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2735,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T09:53:48.270Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d75666131fb4757412bd-cd43b664b5d572da806d",
+          "file": "trial.spec.mjs",
+          "line": 2,
+          "column": 41
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-04T09:27:31.582Z",
-    "duration": 23354.219,
-    "expected": 14,
+    "startTime": "2026-11-04T09:52:53.204Z",
+    "duration": 58222.148,
+    "expected": 41,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
