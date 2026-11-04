@@ -4,12 +4,12 @@
     {
       "name": "navigation-mid",
       "geometry": {
-        "width": 144.09375,
+        "width": 147.265625,
         "height": 49
       },
       "styles": {
-        "left": "169px",
-        "width": "144.094px"
+        "left": "86.6563px",
+        "width": "147.266px"
       }
     },
     {

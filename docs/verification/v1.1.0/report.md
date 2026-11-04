@@ -24,7 +24,7 @@ Glass、Material 3、Minimal、Tech 四风格与 20 模式保留。Liquid Glass 
 ## 实测结果
 - Node.js 24.16.0 / Windows / Codex CLI 0.164.0 / Playwright 1.58.2 / Chromium 148，本地 Edge 用于生成组件验证。
 - `npm test`：29/29（原 24 + 5 个 preset/兼容用例）。
-- `npm run test:web`：原 24 + 新 16，共 40 项，最终结果以 CI/发布附件为准。包括实际剪贴板、失败/竞态、BFCache 恢复、滚动菜单锚点、遮罩关闭、320/390/768 明暗 axe、200% 字体/短窗口/RTL、减少动态效果。
+- `npm run test:web`：原 24 + 新 17，共 41 项，最终结果以 CI/发布附件为准。包括导航首帧无跳跃、实际剪贴板、失败/竞态、BFCache 恢复、滚动菜单锚点、遮罩关闭、320/390/768 明暗 axe、200% 字体/短窗口/RTL、减少动态效果。
 - `examples/liquid-generated` 中 `node verify.cjs`：9/9；单独调用新版 Skill 生成的组件，不混入工程 demo 的通过数。
 - 官方 skill-creator `quick_validate.py`：Skill is valid；核心文件低于 500 行，四风格与20模式结构未变。
 - [中间帧与性能采样](visual-metrics.json)，截图在 production/；原型截图在 reference/。样本只代表本机无头 Web，不代表真机 GPU 或移动平台性能。
