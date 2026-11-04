@@ -1,4 +1,4 @@
-import {createHash} from 'node:crypto';
+import {createHash,randomUUID} from 'node:crypto';
 import {existsSync,readdirSync,lstatSync,readFileSync,writeFileSync,mkdirSync,cpSync,renameSync,rmSync} from 'node:fs';
 import {resolve,join,dirname,relative} from 'node:path';import {fileURLToPath} from 'node:url';import {homedir} from 'node:os';
 const marker='.fluid-ui-install.json';
@@ -19,7 +19,7 @@ export function install({source,target,confirm=false,failBeforeSwap=false}){
  if(prior&&!confirm)throw Error('升级、降级或内容改变需要明确确认');
  mkdirSync(dirname(target),{recursive:true});const stage=`${target}.stage-${process.pid}-${Date.now()}`;let backup;
  try{cpSync(source,stage,{recursive:true,errorOnExist:true,force:false});writeFileSync(join(stage,marker),JSON.stringify({format:1,name:'fluid-ui',version,files:sourceFiles},null,2));if(failBeforeSwap)throw Error('暂存失败测试');
- if(prior){backup=`${target}.backup-${Date.now()}`;renameSync(target,backup);}try{renameSync(stage,target);}catch(error){if(backup)renameSync(backup,target);throw error;}
+ if(prior){backup=`${target}.backup-${Date.now()}-${randomUUID()}`;renameSync(target,backup);}try{renameSync(stage,target);}catch(error){if(backup)renameSync(backup,target);throw error;}
  return {result:'installed',version,backup};
  }finally{if(existsSync(stage))rmSync(stage,{recursive:true});}
 }

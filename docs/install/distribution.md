@@ -29,7 +29,7 @@ bash scripts/install.sh --agent codex --version 1.0.0 --sha256 '<已核实的64�
 ## 状态 升级 降级
 `node scripts/manage.mjs status --agent codex` 输出版本与是否修改。项目配置应固定 `skillVersion` 与 `schemaVersion`。
 
-相同内容重复安装为 unchanged。不同版本或用户修改默认拒绝；先检查 diff 和备份，再由用户明确确认执行 `--confirm-replace`（PowerShell `-ConfirmReplace`）。该标志是用户已确认后的输入，Agent 不得自行用它绕过确认。更新不会自动运行。旧目录保留为相邻 `fluid-ui.backup-<timestamp>`。
+相同内容重复安装为 unchanged。不同版本或用户修改默认拒绝；先检查 diff 和备份，再由用户明确确认执行 `--confirm-replace`（PowerShell `-ConfirmReplace`）。该标志是用户已确认后的输入，Agent 不得自行用它绕过确认。更新不会自动运行。旧目录保留为相邻 `fluid-ui.backup-<timestamp>-<unique-id>`，避免快速升级与降级产生同名冲突。
 
 降级同样检查兼容性与确认。失败时暂存清理，交换失败恢复旧目录。回滚前先审查新目录中的修改，再以备份目录为 `--source` 重新安装，仍需明确确认，不能粗暴删除新文件。schema 主版本不兼容拒绝静默重写，先完成 CHANGELOG 规定的迁移和测试。
 
