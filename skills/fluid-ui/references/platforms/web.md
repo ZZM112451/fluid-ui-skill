@@ -1,5 +1,7 @@
 # Web
 
+Liquid Glass v5 显式预设额外遵循 [连续形变](../morphing.md)：组件 key 与 DOM 恒定，高亮从布局实时边界读取；主题新场景独立绘制、保留滚动、inert/aria-hidden，clip-path 仅作用于副本。dialog 的自然内容高度与三步 transform 同时过渡，关闭事件必须同步真实业务状态而非依赖固定延时。工程示例与原始 handoff 分开，原型跑通不等于生产可用性通过。
+
 沿用 React/Vue/其他现有框架和样式系统。普通按钮用 button，导航用 a，表单用 form/input/label；折叠优先 details，菜单优先 select，模态优先 dialog。自定义组件才承担完整 ARIA 键盘规范。
 
 React 用稳定 key 与受控状态，useEffect cleanup 取消监听/请求；Vue 用 onUnmounted 清理。共享动画不能直接修改框架正在管理的结构。异步用 AbortController 加请求序号，卸载时屏蔽响应；CSS transitionend 不是业务成功信号。

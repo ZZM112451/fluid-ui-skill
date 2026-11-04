@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-04",
+  "source": "用户原始 handoff，未经修改",
+  "results": [
+    {
+      "interaction": "bottom-navigation",
+      "mid": {
+        "left": "192.535px",
+        "width": "111.328px"
+      },
+      "end": {
+        "left": "163.206px",
+        "width": "149.781px"
+      },
+      "persistent": true
+    },
+    {
+      "interaction": "theme-reveal",
+      "direction": "dark",
+      "mid": {
+        "clipPath": "circle(746.263px at 337.5px 43.5px)"
+      },
+      "worldDark": true
+    },
+    {
+      "interaction": "theme-reveal",
+      "direction": "light",
+      "mid": {
+        "clipPath": "circle(751.646px at 337.5px 43.5px)"
+      },
+      "worldDark": false
+    },
+    {
+      "interaction": "timer",
+      "mid": {
+        "width": "227.172px",
+        "borderRadius": "19.3057px"
+      },
+      "end": {
+        "width": "231px",
+        "borderRadius": "19px"
+      },
+      "time": "24:59"
+    },
+    {
+      "interaction": "validation",
+      "error": "请输入至少两个字符",
+      "animation": [
+        "shake"
+      ]
+    },
+    {
+      "interaction": "adaptive-sheet",
+      "mid": {
+        "height": "245.438px"
+      },
+      "success": "matrix(1, 0, 0, 1, -860, 0)",
+      "height": {
+        "height": "215px"
+      }
+    },
+    {
+      "interaction": "copy",
+      "clipboard": "Liquid Glass 验收",
+      "mid": {
+        "borderRadius": "calc(48.9956% + 0.26114px)",
+        "transform": "matrix(1.075, 0, 0, 1.075, 0, 0)"
+      },
+      "feedback": "✓ 已复制到剪贴板"
+    },
+    {
+      "interaction": "scroll-fab",
+      "mid": {
+        "width": "52.3281px",
+        "borderRadius": "calc(44.4667% + 2.87731px)"
+      },
+      "end": {
+        "width": "138px",
+        "borderRadius": "26px"
+      }
+    },
+    {
+      "interaction": "dropdown",
+      "selected": "柔和玻璃 ✓",
+      "closed": true
+    },
+    {
+      "interaction": "reduced-motion",
+      "activeAnimations": 67
+    }
+  ],
+  "errors": []
+}

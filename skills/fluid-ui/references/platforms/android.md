@@ -1,5 +1,7 @@
 # Android Compose
 
+Liquid Glass v5：把宽度、圆角、选中标签和共享高亮绑定同一 transition/稳定组件身份，测量布局边界后协调位置。主题扩散需要独立绘制的新场景与触发位置坐标裁剪；不可只盖单色圆。计时状态保存在业务层，胶囊展开不重建计时；分步内容与自适应 sheet 高度协同，IME/返回和 TalkBack 保留。具体共享布局与绘制 API 按项目 Compose 版本核实；本仓库仅验证 Web，不宣称 Compose 原生等价。
+
 读取 Gradle/version catalog、minSdk、Compose BOM 和既有导航。优先 Material3 的 Button、TextField、ModalBottomSheet、NavigationBar、TopAppBar；不覆写组件默认语义和触控行为来获得视觉效果。状态提升到实际业务所有者；UI 用 StateFlow/collectAsStateWithLifecycle 等项目已有模式。
 
 协程以生命周期为边界；LaunchedEffect key 对应请求身份，DisposableEffect 清理外部资源。取消协程时不要吞掉 CancellationException 后继续成功反馈。保存草稿与导航状态使用适当 SavedStateHandle/rememberSaveable，不能把敏感数据随意持久化。

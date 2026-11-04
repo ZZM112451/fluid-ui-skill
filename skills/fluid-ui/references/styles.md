@@ -8,3 +8,5 @@
 - [Tech](styles/tech.md)：精确读数与工程工具，强调结构。
 
 所有风格共享 [决策与配置](decision.md) 中状态、强度、Token 和无障碍合约。
+
+Glass 的显式可选 [Liquid Glass v5](presets/liquid-glass.md) 预设有批准的八交互连续形变合约，不参与 Auto 默认选择。

@@ -1,0 +1,6 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {decide,validateConfig,styles} from '../skills/fluid-ui/scripts/core.mjs';
+test('保留四风格，不在 Auto 中隐式启用 Liquid Glass',()=>{assert.equal(styles.length,4);assert.equal(decide({platform:'web'}).preset,undefined);});
+test('用户明确 Liquid Glass 时映射 Glass 且保留独立强度',()=>{const d=decide({requestedPreset:'Liquid Glass',existingStyle:'Minimal',intensity:'Subtle'});assert.equal(d.style,'Glass');assert.equal(d.preset,'Liquid Glass');assert.equal(d.intensity,'Subtle');});
+test('现有 Liquid Glass 预设可保留，显式其他风格则退出',()=>{assert.equal(decide({existingStyle:'Glass',existingPreset:'Liquid Glass'}).preset,'Liquid Glass');assert.equal(decide({requestedStyle:'Tech',existingStyle:'Glass',existingPreset:'Liquid Glass'}).preset,undefined);});
+test('冲突或未知预设明确报错，不偷偷改风格',()=>{assert.throws(()=>decide({requestedPreset:'Liquid Glass',requestedStyle:'Material 3'}));assert.throws(()=>decide({requestedPreset:'Unknown'}));});
+test('新旧 1.x 配置兼容，Liquid Glass 只附属于 Glass',()=>{const c={schemaVersion:1,skillVersion:'1.1.0',style:'Glass',mode:'Preset',intensity:'Balanced',preset:'Liquid Glass'};assert.equal(validateConfig(c),c);assert.throws(()=>validateConfig({...c,style:'Minimal'}));assert.equal(validateConfig({...c,skillVersion:'1.0.0',preset:undefined}).skillVersion,'1.0.0');});

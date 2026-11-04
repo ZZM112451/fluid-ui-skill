@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>复制 · Liquid Glass</title>
+<style>
+:root{color-scheme:light;--background:#eaf2fb;--surface:rgba(255,255,255,.68);--text:#243c53;--muted:#52677c;--accent:#307eae;--success:#168e76;--error:#aa3347;--border:rgba(255,255,255,.9);--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}body{margin:0;min-height:100svh;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 20% 20%,#d3e6fc 0,transparent 55%),radial-gradient(ellipse at 85% 80%,#e2dcf5 0,transparent 55%),linear-gradient(145deg,#f1f7fc,var(--background));color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{width:min(100%,400px);padding:32px;border:1px solid var(--border);border-radius:24px;background:var(--surface);box-shadow:0 18px 60px #31557b14,inset 0 1px 0 #ffffffaa;backdrop-filter:blur(18px)}
+label{display:block;font-size:14px;color:var(--muted);margin-bottom:12px}textarea{display:block;width:100%;resize:none;min-height:90px;padding:16px;border:1px solid #8299b0;border-radius:14px;background:#ffffff70;color:var(--text);font:inherit;line-height:1.6;overflow-wrap:anywhere}
+.action{margin-top:24px;display:flex;align-items:center;gap:16px;min-height:56px}.button-slot{width:64px;flex-shrink:0;display:grid;place-items:center}
+button{position:relative;width:64px;height:52px;padding:0;border:1px solid #527e9d;border-radius:14px;background:#e3f1fbbb;color:#245e83;display:grid;place-items:center;cursor:pointer;box-shadow:inset 0 1px 0 #ffffffd9,0 5px 14px #2b658419;transition:width 480ms var(--ease),height 480ms var(--ease),border-radius 480ms var(--ease),background-color 360ms var(--ease),color 360ms var(--ease),border-color 360ms var(--ease)}
+button:hover{background:#d2e9f9}button:active{box-shadow:inset 0 2px 5px #31557b25}button:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:4px}button svg{width:24px;height:24px;grid-area:1/1;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.check{opacity:0;transform:scale(.6);transition:opacity 300ms var(--ease),transform 420ms var(--ease)}.papers{transition:opacity 200ms var(--ease),transform 420ms var(--ease)}
+button[data-state="success"]{width:52px;border-radius:50%;background:var(--success);border-color:var(--success);color:white}button[data-state="success"] .papers{opacity:0;transform:scale(.6)}button[data-state="success"] .check{opacity:1;transform:scale(1)}button[data-state="copying"]{cursor:progress}button[data-state="error"]{border-color:var(--error);color:var(--error)}
+#feedback{margin:0;color:var(--muted);font-size:14px;overflow-wrap:anywhere}#feedback[data-state="success"]{color:#10715e}#feedback[data-state="error"]{color:var(--error)}
+@media(prefers-color-scheme:dark){:root{color-scheme:dark;--background:#182c43;--surface:rgba(30,48,69,.86);--text:#edf4fc;--muted:#c0cede;--border:#68809a;--error:#ffabb8}body{background:radial-gradient(ellipse at 20% 20%,#24415f,transparent 60%),linear-gradient(145deg,#142234,var(--background))}textarea{background:#172b40;color:var(--text)}button{background:#284c68;color:#e2f3ff}button:hover{background:#355f7c}#feedback[data-state="success"]{color:#8ce4cf}}
+@supports not (backdrop-filter:blur(1px)){main{background:#eef5fc}}
+@media(prefers-reduced-motion:reduce){button,button svg{transition:none!important}.check,.papers{transform:none!important}}
+@media(forced-colors:active){main,textarea,button{background:Canvas;color:CanvasText;border:1px solid CanvasText;box-shadow:none;backdrop-filter:none}button[data-state="success"],button[data-state="error"]{background:Canvas;color:CanvasText;border-color:CanvasText}#feedback[data-state]{color:CanvasText}}
+</style>
+</head>
+<body>
+<main aria-label="复制文本">
+<label for="copy-text">待复制的文字</label>
+<textarea id="copy-text" readonly rows="2" spellcheck="false">把灵感留在此刻。</textarea>
+<div class="action">
+<div class="button-slot"><button type="button" id="copy-button" aria-label="复制文字" aria-describedby="feedback" data-state="idle">
+<svg class="papers" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-3"/><rect x="4" y="7" width="12" height="14" rx="2"/></svg>
+<svg class="check" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 12 4 4 8-8"/></svg>
+</button></div>
+<p id="feedback" role="status" aria-live="polite" aria-atomic="true">点击复制文字</p>
+</div>
+</main>
+<script>
+'use strict';
+const button=document.querySelector('#copy-button');
+const source=document.querySelector('#copy-text');
+const feedback=document.querySelector('#feedback');
+let generation=0,restoreTimer=null,active=true;
+function render(state,message){
+  button.dataset.state=state;
+  button.setAttribute('aria-busy',String(state==='copying'));
+  button.setAttribute('aria-label',state==='success'?'已复制，再次复制':state==='copying'?'正在复制':'复制文字');
+  feedback.dataset.state=state;
+  feedback.textContent=message;
+}
+button.addEventListener('click',async()=>{
+  const request=++generation;
+  clearTimeout(restoreTimer);
+  render('copying','正在写入剪贴板…');
+  try{
+    if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');
+    await navigator.clipboard.writeText(source.value);
+    if(!active||request!==generation)return;
+    render('success','已复制到剪贴板');
+    restoreTimer=setTimeout(()=>{if(active&&request===generation)render('idle','点击复制文字');},2200);
+  }catch(error){
+    if(!active||request!==generation)return;
+    render('error','复制失败，请选中文字手动复制');
+  }
+});
+window.addEventListener('pagehide',()=>{active=false;++generation;clearTimeout(restoreTimer);});
+window.addEventListener('pageshow',()=>{active=true;render('idle','点击复制文字');});
+</script>
+</body>
+</html>

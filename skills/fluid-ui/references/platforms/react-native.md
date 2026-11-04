@@ -1,5 +1,7 @@
 # React Native
 
+Liquid Glass v5：保留 React key 与组件身份，用项目已有原生布局/动画能力协调宽度、位置、圆角和标签；useNativeDriver 不支持所有布局属性，不可硬开。主题双场景裁剪必须在目标框架可用能力下实现，无法提供时诚实降级而非假圆罩。共享高亮读取实时布局；计时逻辑独立于展开；分步 Modal 高度与横向过渡协调键盘、安全区和系统返回。不要仅靠 JS setTimeout 拼接多段动画。原生运行尚未验证。
+
 先检查 RN/Expo 版本、架构、导航与动画依赖。Pressable、TextInput、Modal、RefreshControl、FlatList 优先；已有 Reanimated 才按当前版本使用，不为简单反馈新增依赖。
 
 动画优先 Animated 的 transform/opacity 与 useNativeDriver（仅支持属性）；不要对不支持的高度属性强开 native driver。布局动画和手势库按平台/架构验证，不能用 Web 演示代替 Android/iOS 运行。页面卸载停止动画和订阅，useEffect cleanup 取消请求并用请求序号守卫。

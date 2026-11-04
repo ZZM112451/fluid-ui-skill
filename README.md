@@ -2,7 +2,13 @@
 
 Fluid UI is an Agent Skill for deliberate UI design and reliable interaction states. It helps coding agents preserve an existing design system, select an appropriate visual style, and validate changes with proportionate motion.
 
-**Version 1.0.0 · MIT · Codex is the primary tested host.** [中文说明](README.zh-CN.md)
+**Version 1.1.0 · MIT · Codex is the primary tested host.** [中文说明](README.zh-CN.md)
+
+## Liquid Glass v5
+
+Version 1.1.0 adds an **opt-in Liquid Glass preset under Glass**, preserving the original four styles and twenty patterns. Design v5 and Skill version 1.1.0 are different version axes. The approved [handoff](fluid-ui-v5-handoff/ACCEPTANCE.md) and [runnable reference](fluid-ui-v5-handoff/index.html) are preserved without modification. The [engineering demo](demo/liquid-glass/index.html) adds keyboard, focus, interruption, real clipboard failure and responsive safeguards while retaining all eight approved morphing interactions.
+
+Run `npm run dev`, then open `http://127.0.0.1:4173/demo/liquid-glass/`. Use `style: "Glass", preset: "Liquid Glass"`; Auto will not force it on unrelated UI work. See [configuration](skills/fluid-ui/assets/liquid-glass.config.json), [morphing contract](skills/fluid-ui/references/morphing.md), and [1.1.0 verification](docs/verification/v1.1.0/report.md). Native/mobile equivalence is unverified. The three appearance menu items show selection state, not three separate material engines.
 
 ## Capabilities
 

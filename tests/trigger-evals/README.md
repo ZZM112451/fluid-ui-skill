@@ -1,5 +1,7 @@
 # 触发评测
 
+1.1.0 增加 [Liquid Glass 正反例](liquid-glass-cases.json) 与 [三条独立真实样本](../../docs/verification/v1.1.0/trigger-evals.json)。原 20 条案例保留，未逐条实测的状态不变。
+
 [20 条正反例](cases.json) 覆盖四风格、三强度、现有系统、四平台、无动画和无关任务。环境与日期 2026-11-04，Codex CLI 0.164.0 / Windows。
 
 判定方式：真实自动触发必须从独立 Agent 日志观察主动读取/激活 fluid-ui；显式调用从 `$fluid-ui` 请求与实际读取判断；只比较描述、正则或文件存在为静态推断。

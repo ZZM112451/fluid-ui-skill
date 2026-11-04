@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-04",
+  "method": "静态预期，不计作自动触发实测；真实独立样本另见本版触发报告",
+  "cases": [
+    {"prompt":"按已确认液态玻璃设计优化任务列表","expected":true},
+    {"prompt":"让底部导航按钮原位展开并共享滑动高亮","expected":true},
+    {"prompt":"从主题按钮位置圆形揭示完整暗色场景","expected":true},
+    {"prompt":"计时胶囊展开暂停重置但不丢时钟状态","expected":true},
+    {"prompt":"三步弹窗滑动并同时适应内容高度","expected":true},
+    {"prompt":"下滚时 FAB 连续缩成圆形加号","expected":true},
+    {"prompt":"双纸复制图标成功后变绿圆勾，拒绝时不成功","expected":true},
+    {"prompt":"表单错误红边与轻摇，有效输入平滑恢复","expected":true},
+    {"prompt":"实现锚定选择菜单并保留当前项标记","expected":true},
+    {"prompt":"已有 Minimal 页面只改复制反馈，不全站玻璃化","expected":true},
+    {"prompt":"给 Liquid Glass 按钮增加减少动态效果降级","expected":true},
+    {"prompt":"审查组件形变是否因 React key 重挂载而跳跃","expected":true},
+    {"prompt":"写纯后端订单分组与金额函数","expected":false},
+    {"prompt":"把 Liquid Glass 介绍文档翻译成中文，不改界面","expected":false},
+    {"prompt":"整理项目 README 安装步骤","expected":false},
+    {"prompt":"压缩日志并按日期归档","expected":false}
+  ]
+}
