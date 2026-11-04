@@ -1,14 +1,20 @@
 ---
 name: fluid-ui
-description: Use when creating or refining UI screens, components, interaction states, or motion in Web, Compose, Flutter, or React Native projects. Supports Glass, Material 3, Minimal, and Tech. Not for backend-only or document-formatting tasks.
+description: Use when creating or refining UI screens, interactions, or continuous morph animations in Web, Compose, Flutter, or React Native. Includes opt-in Liquid Glass 液态玻璃, fluid navigation, theme reveal, timer pills, sheets, copy feedback, and validation. Not for backend-only or document-formatting tasks.
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # Fluid UI
 
 在项目原有业务、导航与设计系统上改善界面质量。风格选择和动画数量不是质量证据。
+
+## Liquid Glass v5 可选预设
+
+仅在用户指定 Liquid Glass、液态玻璃或项目已有该预设时启用；保留 Glass、Material 3、Minimal、Tech 四个风格，不在 Auto 下强制玻璃化。使用 `style: "Glass"`、`preset: "Liquid Glass"`，强度仍独立。此时先读 [Liquid Glass 与八交互合约](references/presets/liquid-glass.md)，涉及形变再读 [连续状态形变](references/morphing.md)。项目有批准的 HTML 原型时先运行和检查其中间态，不用想象的截图替换行为依据。
+
+导航、胶囊、按钮与弹窗应在同一节点和共享状态中连续变形；不要以重挂载、淡入淡出、只有 toast 或假圆形遮罩冒充。未指定该预设的普通 UI 任务继续沿用下述流程。
 
 ## 工作流程
 

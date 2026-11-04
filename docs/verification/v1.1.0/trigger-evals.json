@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-04",
+  "environment": "Windows / Codex CLI 0.164.0 / 项目级1.1.0，用户级1.0.0未替换",
+  "results": [
+    {
+      "type": "explicit",
+      "expected": true,
+      "observedFluidRead": true,
+      "completed": true,
+      "reads": [
+        {
+          "command": "\"~\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'Get-Content .agents/skills/fluid-ui/SKILL.md'",
+          "exitCode": null
+        },
+        {
+          "command": "\"~\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'Get-Content .agents/skills/fluid-ui/SKILL.md'",
+          "exitCode": 0
+        }
+      ],
+      "final": "已生成 [ui.html](ui.html) 和 [fluid-ui.config.json](fluid-ui.config.json)，使用项目内新版技能，配置固定为 `1.1.0`。\n\n实现真实复制、成功后同按钮变绿圆勾、附近文字反馈、失败提示、约 2.2 秒恢复及减少动态效果适配。\n\n本机 Edge 无头验证：9 项通过，0 失败；配置校验通过。真实复制请通过 localhost 或 HTTPS 打开。"
+    },
+    {
+      "type": "implicit",
+      "expected": true,
+      "observedFluidRead": true,
+      "completed": true,
+      "reads": [
+        {
+          "command": "\"~\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '.agents/skills/fluid-ui/SKILL.md'\"",
+          "exitCode": null
+        },
+        {
+          "command": "\"~\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath '.agents/skills/fluid-ui/SKILL.md'\"",
+          "exitCode": 0
+        },
+        {
+          "command": "\"~\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -Encoding UTF8 -LiteralPath '.agents/skills/fluid-ui/SKILL.md','.agents/skills/fluid-ui/references/presets/liquid-glass.md','.agents/skills/fluid-ui/references/morphing.md'\"",
+          "exitCode": null
+        },
+        {
+          "command": "\"~\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -Encoding UTF8 -LiteralPath '.agents/skills/fluid-ui/SKILL.md','.agents/skills/fluid-ui/references/presets/liquid-glass.md','.agents/skills/fluid-ui/references/morphing.md'\"",
+          "exitCode": 0
+        }
+      ],
+      "final": "依据项目 `fluid-ui` 技能及其液态玻璃、连续形变规范，建议：\n\n1. **复制反馈由真实写入结果驱动。** 使用 `idle → pending → success/error` 状态机，等待剪贴板写入成功后，让同一按钮内的双纸图标连续收拢为绿色圆底与勾，联动圆角、填色和描边，约 420–560ms 完成，停留约 2.2 秒后恢复。失败时保留复制图标并提示原因；用请求序号防止旧 Promise 或旧恢复计时器覆盖新操作。\n\n2. **底部导航保留节点，共用一个滑动高亮。** 各按钮使用稳定 key，选中时在原节点展开标签、调整宽度。唯一高亮根据选中按钮的实时边界同步移动和伸缩；快速切换时从当前位置转向新目标，避免跳到旧终点。保留键盘焦点，并同步选中语义。\n\n3. **减少动态效果时直接呈现目标状态。** 响应 `prefers-reduced-motion`，取消滑动、缩放和图标形变，直接显示绿圆勾与导航选中背景，保留成功停留时间和文字／读屏反馈。偏好在动画中改变时，立即取消动画并落到当前目标状态；验收覆盖写入拒绝、连续点击、快速切换和焦点保留。"
+    },
+    {
+      "type": "negative",
+      "expected": false,
+      "observedFluidRead": false,
+      "completed": true,
+      "reads": [],
+      "final": "```js\nfunction groupOrdersByUser(orders) {\n  const groups = new Map();\n\n  for (const order of orders) {\n    const { userId, amount } = order;\n\n    if (typeof amount !== \"number\" || !Number.isFinite(amount)) {\n      throw new TypeError(\"订单金额必须是有限数字\");\n    }\n\n    if (!groups.has(userId)) {\n      groups.set(userId, { userId, orders: [], totalAmount: 0 });\n    }\n\n    const group = groups.get(userId);\n    group.orders.push(order);\n    group.totalAmount += amount;\n  }\n\n  return [...groups.values()];\n}\n```"
+    }
+  ],
+  "scope": "各独立上下文；显式调用、自然语言UI、纯后端反例各1条；不能外推为全部静态案例实测"
+}

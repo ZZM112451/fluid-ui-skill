@@ -1,6 +1,6 @@
 interface:
   display_name: "Fluid UI"
-  short_description: "多风格 UI 设计与交互增强，保留既有设计系统与业务行为"
+  short_description: "多风格 UI、可选 Liquid Glass 与连续形变，保留既有业务和设计系统"
   default_prompt: "使用 $fluid-ui 优化当前界面，先说明风格与动效决策，再实施并验证最小范围的修改。"
 policy:
   allow_implicit_invocation: true

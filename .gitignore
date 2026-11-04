@@ -11,3 +11,4 @@ examples/comparison/enhanced/screenshots/
 examples/comparison/enhanced/browser-results.json
 examples/comparison/enhanced/axe-results.json
 examples/codex-smoke/form-*.png
+examples/liquid-generated/ui-verified.png

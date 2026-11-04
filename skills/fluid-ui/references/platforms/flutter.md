@@ -1,5 +1,7 @@
 # Flutter
 
+Liquid Glass v5：稳定 Key 保留对象状态，使用同一进度协调布局/圆角/图标，不以 AnimatedSwitcher 重挂载冒充连续形变。圆形主题扩散需要独立新主题场景与触发按钮相对坐标，ClipPath 裁剪内容而非单色圆罩。计时截止时间与 AnimationController 分离；分步布局按约束测量高度并与横向移动并发。dispose 释放控制器、取消旧请求，Semantics/系统减少动态效果提供静态等效交互。此为适配指导，Flutter 未编译/真机验证。
+
 先读 pubspec 与 ThemeData。使用项目已采用的 Material/Cupertino 组件，Material 3 用 ColorScheme 和组件主题；不要把 Web 的 CSS 模糊方案机械转成整屏 BackdropFilter。
 
 业务状态沿用项目方案。每个 AnimationController 只由对应 State 管理并在 dispose 释放；异步完成先检查 mounted 与请求代次。取消能力依 HTTP 客户端；无原生取消时至少拒绝迟到响应。错误与取消不作为成功。

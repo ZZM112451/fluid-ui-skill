@@ -1,10 +1,21 @@
 {
   "schemaVersion": 1,
-  "skillVersion": "1.0.0",
+  "skillVersion": "1.1.0",
   "mode": "Auto",
   "style": "Minimal",
   "intensity": "Balanced",
-  "tokens": {"accent": "#166447", "spaceUnit": 8, "radius": 12, "motionMs": 180, "easing": "cubic-bezier(.2,.8,.2,1)"},
-  "interactions": ["async-button-states", "animated-form-validation"],
-  "exceptions": ["用户减少动态效果时所有空间运动关闭"]
+  "tokens": {
+    "accent": "#166447",
+    "spaceUnit": 8,
+    "radius": 12,
+    "motionMs": 180,
+    "easing": "cubic-bezier(.2,.8,.2,1)"
+  },
+  "interactions": [
+    "async-button-states",
+    "animated-form-validation"
+  ],
+  "exceptions": [
+    "用户减少动态效果时所有空间运动关闭"
+  ]
 }

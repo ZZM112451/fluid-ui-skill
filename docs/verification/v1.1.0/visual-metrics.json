@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-04",
+  "records": [
+    {
+      "name": "navigation-mid",
+      "geometry": {
+        "width": 144.09375,
+        "height": 49
+      },
+      "styles": {
+        "left": "169px",
+        "width": "144.094px"
+      }
+    },
+    {
+      "name": "theme-true-mid",
+      "geometry": {
+        "width": 430,
+        "height": 730
+      },
+      "styles": {
+        "clipPath": "circle(535.513px at 337.5px 43.5px)"
+      }
+    },
+    {
+      "name": "theme-false-mid",
+      "geometry": {
+        "width": 430,
+        "height": 730
+      },
+      "styles": {
+        "clipPath": "circle(535.513px at 337.5px 43.5px)"
+      }
+    },
+    {
+      "name": "timer-mid",
+      "geometry": {
+        "width": 222.703125,
+        "height": 53
+      },
+      "styles": {
+        "width": "222.703px",
+        "borderRadius": "19.6628px"
+      }
+    },
+    {
+      "name": "copy-mid",
+      "geometry": {
+        "width": 41.1295166015625,
+        "height": 41.1295166015625
+      },
+      "styles": {
+        "borderRadius": "calc(45.8573% + 1.07709px)",
+        "transform": "matrix(1.0546, 0, 0, 1.0546, 0, 0)"
+      }
+    },
+    {
+      "name": "clipboard-real",
+      "matches": true
+    },
+    {
+      "name": "fab-mid",
+      "geometry": {
+        "width": 58.203125,
+        "height": 51
+      },
+      "styles": {
+        "width": "58.2031px",
+        "borderRadius": "calc(34.127% + 8.25395px)"
+      }
+    },
+    {
+      "name": "dropdown-mid",
+      "geometry": {
+        "width": 174.27505493164062,
+        "height": 132.44903564453125
+      },
+      "styles": {
+        "opacity": "0.68254",
+        "transform": "matrix(0.995857, 0, 0, 0.995857, 0, -0.745678)"
+      }
+    },
+    {
+      "name": "validation-mid",
+      "geometry": {
+        "width": 387.984375,
+        "height": 19.109375
+      },
+      "styles": {
+        "maxHeight": "19.1111px",
+        "opacity": "0.68254"
+      }
+    },
+    {
+      "name": "sheet-mid",
+      "geometry": {
+        "width": 430,
+        "height": 245.828125
+      },
+      "styles": {
+        "height": "245.828px"
+      }
+    }
+  ],
+  "responsive": {
+    "pageOverflow": false,
+    "dialogWidth": 366,
+    "viewport": 390
+  },
+  "performanceSample": {
+    "samples": 89,
+    "p50Ms": 6.099999999999966,
+    "p95Ms": 6.199999999999989,
+    "over25Ms": 0,
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.0.0 Safari/537.36",
+    "scope": "单次主题扩散期间的无头浏览器 rAF 样本，非设备 GPU/绘制层/原生性能保证"
+  },
+  "errors": []
+}

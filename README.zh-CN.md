@@ -1,6 +1,13 @@
 # Fluid UI
 
-面向编程 Agent 的 UI 设计与交互增强 Skill。优先保留项目既有设计系统与业务，只在有价值的位置使用动效。名称 fluid-ui，版本 1.0.0，许可证 MIT。
+面向编程 Agent 的 UI 设计与交互增强 Skill。优先保留项目既有设计系统与业务，只在有价值的位置使用动效。名称 fluid-ui，版本 1.1.0，许可证 MIT。
+
+## 已确认的 Liquid Glass v5
+设计版本 v5 对应兼容增强版 Skill 1.1.0。原四风格、20 模式和旧配置保留；Liquid Glass 仅作为 Glass 的显式预设，不自动覆盖现有项目。项目配置设置 `style: "Glass", preset: "Liquid Glass"`，强度独立。
+
+[原始交付](fluid-ui-v5-handoff/ACCEPTANCE.md) · [工程示例](demo/liquid-glass/index.html) · [本版验证](docs/verification/v1.1.0/report.md)。启动 `npm run dev` 后访问 `http://127.0.0.1:4173/demo/liquid-glass/`。八种交互保留连续形变、完整双场景主题扩散、独立计时和三步滑动，补充失败/竞态、键盘、焦点与减少动态效果。三项外观菜单只示意选择状态，原生平台仍未验证。
+
+示例：`使用 $fluid-ui 按已确认的 Liquid Glass v5 合约实现页面，保留八交互的持续节点与形变，不以淡入淡出替代；先运行原型，再验证中间态、失败和取消。`
 
 ## 能力与边界
 四风格 Glass、Material 3、Minimal、Tech；三模式 Auto/Preset/Hybrid；独立三档强度 Subtle/Balanced/Expressive。[20 种模式](skills/fluid-ui/references/patterns.md) 按需读取，涵盖状态、动画参数、中断、无障碍、性能、平台与验收。

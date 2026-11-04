@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "skillVersion": "1.1.0",
+  "mode": "Preset",
+  "style": "Glass",
+  "preset": "Liquid Glass",
+  "intensity": "Balanced",
+  "tokens": {
+    "accent": "#307eae",
+    "success": "#168e76",
+    "spaceUnit": 8,
+    "radius": 14,
+    "motionMs": 480,
+    "feedbackMs": 360,
+    "successHoldMs": 2200,
+    "easing": "cubic-bezier(.22,1,.36,1)"
+  },
+  "interactions": ["copy-success-feedback"],
+  "exceptions": [
+    "减少动态效果时立即应用目标几何，保留图标和文字反馈",
+    "高对比模式使用实色边界，取消模糊与阴影",
+    "复制失败保留错误文字，支持手动选取复制"
+  ]
+}
