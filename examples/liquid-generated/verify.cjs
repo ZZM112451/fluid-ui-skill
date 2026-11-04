@@ -30,5 +30,3 @@ const fs=require('fs');
  await context.close();console.log(`结果：${passed} 通过，0 失败`);
  }finally{await browser.close();server.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});
-
-
