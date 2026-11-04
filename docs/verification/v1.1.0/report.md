@@ -1,6 +1,6 @@
 # Fluid UI 1.1.0 Liquid Glass v5 验证报告
 
-日期 2026-11-04。设计版本 v5，Skill SemVer 1.1.0。当前为本地验证完成、远程发布准备状态；最终 commit/tag/CI/下载安装证据以本版 Release 验收附件为准，不提前声明发布。
+日期 2026-11-04。设计版本 v5，Skill SemVer 1.1.0。已通过 Windows/Ubuntu CI 并[正式发布 v1.1.0](https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.1.0)。源码提交 `777578e4339bf467c975b4c3be6108d0055f3aa2`；发布包下载校验、本地备份升级、幂等与回滚试验、用户级新进程实际读取均已完成，详见[发布与安装验收](publication-report-v1.1.0.zh-CN.md)及[机器记录](publication-verification-v1.1.0.json)。
 
 ## 依据和实施范围
 用户提供的 [index.html](../../../fluid-ui-v5-handoff/index.html)、[ACCEPTANCE.md](../../../fluid-ui-v5-handoff/ACCEPTANCE.md)、[CODEX_TASK.md](../../../fluid-ui-v5-handoff/CODEX_TASK.md) 原样保留。先在 localhost 实际操作全部八交互并保存 [原型观察](reference/observations.json)，再添加 [工程示例](../../../demo/liquid-glass/index.html)。原型是批准设计的行为重建，不宣称 AppBlock 字节级导出。
@@ -24,7 +24,7 @@ Glass、Material 3、Minimal、Tech 四风格与 20 模式保留。Liquid Glass 
 ## 实测结果
 - Node.js 24.16.0 / Windows / Codex CLI 0.164.0 / Playwright 1.58.2 / Chromium 148，本地 Edge 用于生成组件验证。
 - `npm test`：29/29（原 24 + 5 个 preset/兼容用例）。
-- `npm run test:web`：原 24 + 新 17，共 41 项，最终结果以 CI/发布附件为准。包括导航首帧无跳跃、实际剪贴板、失败/竞态、BFCache 恢复、滚动菜单锚点、遮罩关闭、320/390/768 明暗 axe、200% 字体/短窗口/RTL、减少动态效果。
+- `npm run test:web`：原 24 + 新 17，共 41/41 项；本地与最终两组 CI 均通过。包括导航首帧无跳跃、实际剪贴板、失败/竞态、BFCache 恢复、滚动菜单锚点、遮罩关闭、320/390/768 明暗 axe、200% 字体/短窗口/RTL、减少动态效果。
 - `examples/liquid-generated` 中 `node verify.cjs`：9/9；单独调用新版 Skill 生成的组件，不混入工程 demo 的通过数。
 - 官方 skill-creator `quick_validate.py`：Skill is valid；核心文件低于 500 行，四风格与20模式结构未变。
 - [中间帧与性能采样](visual-metrics.json)，截图在 production/；原型截图在 reference/。样本只代表本机无头 Web，不代表真机 GPU 或移动平台性能。
@@ -39,7 +39,7 @@ Glass、Material 3、Minimal、Tech 四风格与 20 模式保留。Liquid Glass 
 ## 版本与安装发布门槛
 使用特性分支 codex/fluid-ui-v5-liquid-glass，独立审查后 PR、Windows/Ubuntu CI、正常合并，保留 1.0.0 tag/Release。新增 1.1.0 ZIP/SHA256、原始 handoff 和测试证据；在远程下载验证后，比较当前用户安装 manifest，只有无自定义修改才依据用户本次明确授权备份升级，不覆盖未知内容。
 
-用户级目标 `~/.agents/skills/fluid-ui`，备份及实际调用结果在发布后验收附件记录。回滚用完整旧版备份或固定 1.0.0 包，需先检查新增用户内容。源代码快照不包含凭据、原始 Agent 会话或本机绝对路径。
+用户级目标 `~/.agents/skills/fluid-ui` 已升级至 1.1.0；完整旧版备份已移出扫描目录。升级后新进程实际读取用户级新版及预设、形变参考，版本确认为 1.1.0。备份及实际调用结果在发布验收附件记录。回滚用完整旧版备份或固定 1.0.0 包，需先检查新增用户内容。源代码快照不包含凭据、原始 Agent 会话或本机绝对路径。
 
 ## 未验证边界
 Android/Flutter/RN 只更新实现指导，未编译或真机等价验收；其他 Agent 的实际发现和执行未验证。macOS、人工读屏、设备键盘、GPU/绘制层性能未验证。主题过渡使用单次串行保护；不是承诺所有运行时都支持任意并发主题切换。后退缓存回归用真实浏览器派发事件检查恢复逻辑，不冒充完整浏览器导航缓存命中率测试。

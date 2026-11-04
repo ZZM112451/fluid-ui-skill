@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-04",
+  "repository": "https://github.com/ZZM112451/fluid-ui-skill",
+  "release": "https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.1.0",
+  "tag": "v1.1.0",
+  "commit": "777578e4339bf467c975b4c3be6108d0055f3aa2",
+  "ci": "https://github.com/ZZM112451/fluid-ui-skill/actions/runs/41811735451",
+  "ciConclusion": "success",
+  "sha256": "abc602f8a5e3782940fcfd50f681140ac035114cc0c6307c4d92621478d76b9d",
+  "version": "1.1.0",
+  "installation": {
+    "target": "~/.agents/skills/fluid-ui",
+    "backup": "~/.agents/skill-backups/fluid-ui-1.0.0-cdc0df2e-d2a9-45ac-8c22-0b4f989e0a44",
+    "priorVersion": "1.0.0",
+    "installedModified": false,
+    "backupModified": false,
+    "idempotent": true,
+    "rollbackTrial": true
+  },
+  "verification": {
+    "core": 29,
+    "browser": 41,
+    "independentGenerated": 9,
+    "historyFindings": 0,
+    "dependencyAuditFindings": 0,
+    "projectTriggerSamples": {
+      "explicit": 1,
+      "implicit": 1,
+      "negative": 1
+    },
+    "installedUserSkill": {
+      "completed": true,
+      "reads": [
+        {
+          "command": "\"~\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -Raw '~\\\\.agents\\\\skills\\\\fluid-ui\\\\SKILL.md'\"",
+          "exitCode": 0
+        },
+        {
+          "command": "\"~\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command \"Get-Content -Encoding UTF8 -Raw '~\\\\.agents\\\\skills\\\\fluid-ui\\\\references\\\\presets\\\\liquid-glass.md','~\\\\.agents\\\\skills\\\\fluid-ui\\\\references\\\\morphing.md','~\\\\.agents\\\\skills\\\\using-superpowers\\\\SKILL.md'\"",
+          "exitCode": 0
+        }
+      ],
+      "final": "技能版本：**fluid-ui 1.1.0**；预设：**Liquid Glass v5**。\n\n1. **复制按钮**：使用同一个按钮节点；等待剪贴板写入成功后，让双纸图标连续变形成成功标记，约 2.2 秒后恢复。写入失败时显示错误，不触发成功形态。\n2. **可展开底部导航**：保留同一组导航按钮，让选中项从图标平滑展开为图标加标签，其他项同步收缩；指示器跟随选中项的实时位置和宽度移动，快速切换时从当前形态继续过渡。"
+    }
+  },
+  "limitations": [
+    "静态触发案例不等于实测，不保证每次自动选择",
+    "Compose/Flutter/React Native、其他 Agent、macOS、人工读屏和真机 GPU 未验证",
+    "BFCache 用真实浏览器事件检查恢复逻辑，不代表完整缓存命中测试"
+  ]
+}
