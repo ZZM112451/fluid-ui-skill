@@ -22,55 +22,55 @@
 
 ## 已验收交互 · 真实 Demo 与 GIF
 
-下面 8 项基于已验收的 Liquid Glass v5 交互契约，提供可操作的独立 Demo。GIF 由自动化 Chromium 实际运行并截图生成，**不是 AI 概念插画**。如 GIF 暂未显示，表示自动生成流程尚未完成，请先使用 Demo。
+下面 8 项基于已验收的 Liquid Glass v5 交互契约，提供可操作的独立 Demo。已添加 Chromium 真实浏览器 GIF 生成流程，但**生成结果尚未验收，因此暂不嵌入未生成的图片**。现在可直接打开各项 Demo，且不再使用重复的概念占位图。
 
 **[打开 8 项独立交互 Demo](demo/approved-interactions/index.html)** · [原始验收台](fluid-ui-v5-handoff/index.html)
 
 ### 流体底部导航
 
-[![流体底部导航 — actual browser capture](docs/images/approved-gifs/navigation.gif)](demo/approved-interactions/index.html#navigation)
+[▶ 流体底部导航](demo/approved-interactions/index.html#navigation)
 
 [操作 Demo](demo/approved-interactions/index.html#navigation) · [交互规范](skills/fluid-ui/references/patterns/fluid-bottom-navigation.md)
 
 ### 圆形主题扩散
 
-[![圆形主题扩散 — actual browser capture](docs/images/approved-gifs/theme.gif)](demo/approved-interactions/index.html#theme)
+[▶ 圆形主题扩散](demo/approved-interactions/index.html#theme)
 
 [操作 Demo](demo/approved-interactions/index.html#theme) · [交互规范](skills/fluid-ui/references/patterns/theme-reveal.md)
 
 ### 悬浮计时胶囊
 
-[![悬浮计时胶囊 — actual browser capture](docs/images/approved-gifs/timer.gif)](demo/approved-interactions/index.html#timer)
+[▶ 悬浮计时胶囊](demo/approved-interactions/index.html#timer)
 
 [操作 Demo](demo/approved-interactions/index.html#timer) · [交互规范](skills/fluid-ui/references/patterns/floating-timer-pill.md)
 
 ### 三步自适应弹窗
 
-[![三步自适应弹窗 — actual browser capture](docs/images/approved-gifs/sheet.gif)](demo/approved-interactions/index.html#sheet)
+[▶ 三步自适应弹窗](demo/approved-interactions/index.html#sheet)
 
 [操作 Demo](demo/approved-interactions/index.html#sheet) · [交互规范](skills/fluid-ui/references/patterns/adaptive-step-sheet.md)
 
 ### 滚动感知 FAB
 
-[![滚动感知 FAB — actual browser capture](docs/images/approved-gifs/scroll-fab.gif)](demo/approved-interactions/index.html#scroll-fab)
+[▶ 滚动感知 FAB](demo/approved-interactions/index.html#scroll-fab)
 
 [操作 Demo](demo/approved-interactions/index.html#scroll-fab) · [交互规范](skills/fluid-ui/references/patterns/scroll-aware-fab.md)
 
 ### 复制成功形变
 
-[![复制成功形变 — actual browser capture](docs/images/approved-gifs/clipboard.gif)](demo/approved-interactions/index.html#clipboard)
+[▶ 复制成功形变](demo/approved-interactions/index.html#clipboard)
 
 [操作 Demo](demo/approved-interactions/index.html#clipboard) · [交互规范](skills/fluid-ui/references/patterns/copy-success-feedback.md)
 
 ### 动态表单校验
 
-[![动态表单校验 — actual browser capture](docs/images/approved-gifs/validation.gif)](demo/approved-interactions/index.html#validation)
+[▶ 动态表单校验](demo/approved-interactions/index.html#validation)
 
 [操作 Demo](demo/approved-interactions/index.html#validation) · [交互规范](skills/fluid-ui/references/patterns/animated-form-validation.md)
 
 ### 锚定下拉菜单
 
-[![锚定下拉菜单 — actual browser capture](docs/images/approved-gifs/dropdown-demo.gif)](demo/approved-interactions/index.html#dropdown-demo)
+[▶ 锚定下拉菜单](demo/approved-interactions/index.html#dropdown-demo)
 
 [操作 Demo](demo/approved-interactions/index.html#dropdown-demo) · [交互规范](skills/fluid-ui/references/patterns/anchored-dropdown.md)
 
