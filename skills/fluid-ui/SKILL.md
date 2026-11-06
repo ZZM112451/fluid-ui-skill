@@ -3,7 +3,7 @@ name: fluid-ui
 description: Use when creating or refining UI screens, interactions, or continuous morph animations in Web, Compose, Flutter, or React Native. Includes opt-in Liquid Glass 液态玻璃, fluid navigation, theme reveal, timer pills, sheets, copy feedback, and validation. Not for backend-only or document-formatting tasks.
 license: MIT
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
 ---
 
 # Fluid UI
