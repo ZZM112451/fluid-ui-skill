@@ -23,7 +23,7 @@ The new **Crystal Motion** Glass preset adds nearly transparent optical surfaces
 - [Crystal Motion config example](skills/fluid-ui/assets/crystal-motion.config.json)
 - [Rollout and verification checklist](skills/fluid-ui/references/crystal-motion-rollout.md)
 
-Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20-pattern guidance is available; this is not a claim that all 20 patterns have separately implemented and tested Crystal Motion components. See the verification checklist for current limits. Version 1.2.0 is staged for release, pending successful automated checks and release packaging.
+Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20-pattern guidance is available; this is not a claim that all 20 patterns have separately implemented and tested Crystal Motion components. See the verification checklist for current limits. Version 1.2.0 is the version recorded in this repository. For published release assets and verification evidence, consult the GitHub Releases page and the verification reports.
 
 ## Visual gallery — 20 interactions
 
