@@ -20,14 +20,129 @@
 
 面向编程 Agent 的 UI 设计与交互增强 Skill。优先保留项目既有设计系统与业务，只在有价值的位置使用动效。名称 fluid-ui，版本 1.2.0（候选发布），许可证 MIT。
 
-## 20 种交互独立效果展示
+## 全部 20 种交互 · 逐项图片展示
 
-[![主题扩散概念图](docs/images/patterns/theme-reveal.svg)](docs/SHOWCASE.zh-CN.md)
-[![计时胶囊概念图](docs/images/patterns/floating-timer-pill.svg)](docs/SHOWCASE.zh-CN.md)
-[![流体导航概念图](docs/images/patterns/fluid-bottom-navigation.svg)](docs/SHOWCASE.zh-CN.md)
-[![分步弹窗概念图](docs/images/patterns/adaptive-step-sheet.svg)](docs/SHOWCASE.zh-CN.md)
+每种交互都有**独立图片、功能说明与实现规范入口**。这些 SVG 为概念效果示意，**不是 20 种组件均已验证的运行截图**。实际测试情况见[验证状态表](docs/SHOWCASE.zh-CN.md)。
 
-**[查看全部 20 张独立交互示意图、验收要点与验证状态](docs/SHOWCASE.zh-CN.md)**。图片是概念示意，不代表全部组件已经实现或通过测试。
+### 01. 主题扩散 · Theme Reveal
+
+[![主题扩散 Crystal Motion 概念效果示意](docs/images/patterns/theme-reveal.svg)](skills/fluid-ui/references/patterns/theme-reveal.md)
+
+完整明暗场景的圆形扩散切换。 [交互规范](skills/fluid-ui/references/patterns/theme-reveal.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 02. 悬浮计时胶囊 · Floating Timer Pill
+
+[![悬浮计时胶囊 Crystal Motion 概念效果示意](docs/images/patterns/floating-timer-pill.svg)](skills/fluid-ui/references/patterns/floating-timer-pill.md)
+
+计时不中断的可展开胶囊。 [交互规范](skills/fluid-ui/references/patterns/floating-timer-pill.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 03. 自适应分步弹窗 · Adaptive Step Sheet
+
+[![自适应分步弹窗 Crystal Motion 概念效果示意](docs/images/patterns/adaptive-step-sheet.svg)](skills/fluid-ui/references/patterns/adaptive-step-sheet.md)
+
+高度与内容协同变化的多步骤弹窗。 [交互规范](skills/fluid-ui/references/patterns/adaptive-step-sheet.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 04. 流体底部导航 · Fluid Bottom Navigation
+
+[![流体底部导航 Crystal Motion 概念效果示意](docs/images/patterns/fluid-bottom-navigation.svg)](skills/fluid-ui/references/patterns/fluid-bottom-navigation.md)
+
+同一水晶镜片在导航项之间连续移动形变。 [交互规范](skills/fluid-ui/references/patterns/fluid-bottom-navigation.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 05. 随滚动变化的悬浮按钮 · Scroll-aware FAB
+
+[![随滚动变化的悬浮按钮 Crystal Motion 概念效果示意](docs/images/patterns/scroll-aware-fab.svg)](skills/fluid-ui/references/patterns/scroll-aware-fab.md)
+
+随滚动收缩和展开的操作按钮。 [交互规范](skills/fluid-ui/references/patterns/scroll-aware-fab.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 06. 复制成功反馈 · Copy Success Feedback
+
+[![复制成功反馈 Crystal Motion 概念效果示意](docs/images/patterns/copy-success-feedback.svg)](skills/fluid-ui/references/patterns/copy-success-feedback.md)
+
+真正复制成功后才改变形态的反馈。 [交互规范](skills/fluid-ui/references/patterns/copy-success-feedback.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 07. 动态表单校验 · Animated Form Validation
+
+[![动态表单校验 Crystal Motion 概念效果示意](docs/images/patterns/animated-form-validation.svg)](skills/fluid-ui/references/patterns/animated-form-validation.md)
+
+错误提示平滑展开且保持无障碍语义。 [交互规范](skills/fluid-ui/references/patterns/animated-form-validation.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 08. 锚定下拉菜单 · Anchored Dropdown
+
+[![锚定下拉菜单 Crystal Motion 概念效果示意](docs/images/patterns/anchored-dropdown.svg)](skills/fluid-ui/references/patterns/anchored-dropdown.md)
+
+从触发器延展并正确管理焦点的菜单。 [交互规范](skills/fluid-ui/references/patterns/anchored-dropdown.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 09. 共享元素过渡 · Shared Element Transition
+
+[![共享元素过渡 Crystal Motion 概念效果示意](docs/images/patterns/shared-element-transition.svg)](skills/fluid-ui/references/patterns/shared-element-transition.md)
+
+同一视觉元素跨页面保持连续身份。 [交互规范](skills/fluid-ui/references/patterns/shared-element-transition.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 10. 可展开搜索框 · Expandable Search Field
+
+[![可展开搜索框 Crystal Motion 概念效果示意](docs/images/patterns/expandable-search-field.svg)](skills/fluid-ui/references/patterns/expandable-search-field.md)
+
+紧凑搜索控件展开为可输入的搜索框。 [交互规范](skills/fluid-ui/references/patterns/expandable-search-field.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 11. 弹性下拉刷新 · Elastic Pull to Refresh
+
+[![弹性下拉刷新 Crystal Motion 概念效果示意](docs/images/patterns/elastic-pull-to-refresh.svg)](skills/fluid-ui/references/patterns/elastic-pull-to-refresh.md)
+
+具有弹性阻尼的手势刷新指示器。 [交互规范](skills/fluid-ui/references/patterns/elastic-pull-to-refresh.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 12. 滑动操作 · Swipe Actions
+
+[![滑动操作 Crystal Motion 概念效果示意](docs/images/patterns/swipe-actions.svg)](skills/fluid-ui/references/patterns/swipe-actions.md)
+
+通过可控滑动露出上下文操作。 [交互规范](skills/fluid-ui/references/patterns/swipe-actions.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 13. 骨架屏内容过渡 · Skeleton Content Transition
+
+[![骨架屏内容过渡 Crystal Motion 概念效果示意](docs/images/patterns/skeleton-content-transition.svg)](skills/fluid-ui/references/patterns/skeleton-content-transition.md)
+
+加载占位平滑过渡到实际内容。 [交互规范](skills/fluid-ui/references/patterns/skeleton-content-transition.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 14. 表态微交互 · Reaction Microinteraction
+
+[![表态微交互 Crystal Motion 概念效果示意](docs/images/patterns/reaction-microinteraction.svg)](skills/fluid-ui/references/patterns/reaction-microinteraction.md)
+
+支持连续操作的轻量表态反馈。 [交互规范](skills/fluid-ui/references/patterns/reaction-microinteraction.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 15. 异步按钮状态 · Async Button States
+
+[![异步按钮状态 Crystal Motion 概念效果示意](docs/images/patterns/async-button-states.svg)](skills/fluid-ui/references/patterns/async-button-states.md)
+
+按钮在加载、成功和失败状态间连续变换。 [交互规范](skills/fluid-ui/references/patterns/async-button-states.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 16. 沉浸式图片预览 · Immersive Image Preview
+
+[![沉浸式图片预览 Crystal Motion 概念效果示意](docs/images/patterns/immersive-image-preview.svg)](skills/fluid-ui/references/patterns/immersive-image-preview.md)
+
+图片连续放大进入沉浸式预览。 [交互规范](skills/fluid-ui/references/patterns/immersive-image-preview.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 17. 预测式返回过渡 · Predictive Back Transition
+
+[![预测式返回过渡 Crystal Motion 概念效果示意](docs/images/patterns/predictive-back-transition.svg)](skills/fluid-ui/references/patterns/predictive-back-transition.md)
+
+页面运动跟随系统返回手势。 [交互规范](skills/fluid-ui/references/patterns/predictive-back-transition.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 18. 空状态与错误状态 · Empty and Error States
+
+[![空状态与错误状态 Crystal Motion 概念效果示意](docs/images/patterns/empty-and-error-states.svg)](skills/fluid-ui/references/patterns/empty-and-error-states.md)
+
+在克制的玻璃表面提供清晰恢复操作。 [交互规范](skills/fluid-ui/references/patterns/empty-and-error-states.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 19. 可展开内容卡片 · Expandable Content Card
+
+[![可展开内容卡片 Crystal Motion 概念效果示意](docs/images/patterns/expandable-content-card.svg)](skills/fluid-ui/references/patterns/expandable-content-card.md)
+
+卡片连续扩展为详情容器。 [交互规范](skills/fluid-ui/references/patterns/expandable-content-card.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
+
+### 20. 折叠顶部应用栏 · Collapsing Top App Bar
+
+[![折叠顶部应用栏 Crystal Motion 概念效果示意](docs/images/patterns/collapsing-top-app-bar.svg)](skills/fluid-ui/references/patterns/collapsing-top-app-bar.md)
+
+顶部标题栏随内容滚动平滑压缩。 [交互规范](skills/fluid-ui/references/patterns/collapsing-top-app-bar.md) · [验收状态](docs/SHOWCASE.zh-CN.md)
 
 ## 已确认的 Liquid Glass v5
 设计版本 v5 对应兼容增强版 Skill 1.1.0。原四风格、20 模式和旧配置保留；Liquid Glass 仅作为 Glass 的显式预设，不自动覆盖现有项目。项目配置设置 `style: "Glass", preset: "Liquid Glass"`，强度独立。
