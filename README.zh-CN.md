@@ -1,5 +1,23 @@
 # Fluid UI
 
+**[English (default)](README.md)** · 简体中文
+
+![Crystal Motion 视觉概念示意图，非浏览器实测截图](docs/images/crystal-motion-preview.svg)
+
+> **图片是视觉概念示意，不是浏览器实际截图。** 真实交互和材质渲染请运行 [Crystal Motion Web 演示](demo/crystal-motion/index.html)。
+
+**让界面拥有生命力。** Fluid UI 是面向 Codex 等编程 Agent 的 UI 设计与交互增强 Skill。通过统一的状态驱动交互、可中断弹簧运动、无障碍与性能规范，让界面更清透、更连贯、更可靠。Crystal Motion 作为可选预设，为全部 20 种交互提供高透亮水晶玻璃的材质与运动指导。
+
+[交互演示](demo/crystal-motion/index.html) · [Crystal Motion 完整规范](skills/fluid-ui/references/presets/crystal-motion.md) · [20 种模式](skills/fluid-ui/references/patterns.md)
+
+## Crystal Motion 全面规范
+
+- **视觉**：近乎透明的玻璃本体、明亮纤细的高光边缘、低模糊与 Aurora 背景。
+- **动效**：连续共享形变、速度继承、手势追踪和快速反向中断。
+- **覆盖**：全部 20 种交互模式均有适配指导；现有可运行参考仅覆盖部分组件，不能声称全部已完成工程实现。
+- **兼容**：保留 Liquid Glass v5、原四种风格与既有项目设计系统；不强制 Auto 玻璃化。
+
+
 面向编程 Agent 的 UI 设计与交互增强 Skill。优先保留项目既有设计系统与业务，只在有价值的位置使用动效。名称 fluid-ui，版本 1.1.0，许可证 MIT。
 
 ## 已确认的 Liquid Glass v5
