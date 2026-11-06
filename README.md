@@ -25,14 +25,129 @@ The new **Crystal Motion** Glass preset adds nearly transparent optical surfaces
 
 Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20-pattern guidance is available; this is not a claim that all 20 patterns have separately implemented and tested Crystal Motion components. See the verification checklist for current limits. Version 1.2.0 is staged for release, pending successful automated checks and release packaging.
 
-## Visual gallery — 20 interactions
+## All 20 interactions — illustrated showcase
 
-[![Theme Reveal concept](docs/images/patterns/theme-reveal.svg)](docs/SHOWCASE.md)
-[![Floating Timer Pill concept](docs/images/patterns/floating-timer-pill.svg)](docs/SHOWCASE.md)
-[![Fluid Bottom Navigation concept](docs/images/patterns/fluid-bottom-navigation.svg)](docs/SHOWCASE.md)
-[![Adaptive Step Sheet concept](docs/images/patterns/adaptive-step-sheet.svg)](docs/SHOWCASE.md)
+Every pattern has its **own image**, a concise explanation, and a link to the underlying implementation contract. The images are conceptual SVG illustrations, **not screenshots of 20 verified components**. The [verification matrix](docs/SHOWCASE.md) records what has actually been tested.
 
-**[Browse all 20 individually illustrated patterns, acceptance criteria, and verification status](docs/SHOWCASE.md)**. These are conceptual illustrations, not captured evidence of 20 runnable components.
+### 01. Theme Reveal
+
+[![Theme Reveal — conceptual Crystal Motion illustration](docs/images/patterns/theme-reveal.svg)](skills/fluid-ui/references/patterns/theme-reveal.md)
+
+Circular transition between complete light and dark scenes. [Specification](skills/fluid-ui/references/patterns/theme-reveal.md) · [Verification](docs/SHOWCASE.md)
+
+### 02. Floating Timer Pill
+
+[![Floating Timer Pill — conceptual Crystal Motion illustration](docs/images/patterns/floating-timer-pill.svg)](skills/fluid-ui/references/patterns/floating-timer-pill.md)
+
+A compact timer that expands without interrupting timekeeping. [Specification](skills/fluid-ui/references/patterns/floating-timer-pill.md) · [Verification](docs/SHOWCASE.md)
+
+### 03. Adaptive Step Sheet
+
+[![Adaptive Step Sheet — conceptual Crystal Motion illustration](docs/images/patterns/adaptive-step-sheet.svg)](skills/fluid-ui/references/patterns/adaptive-step-sheet.md)
+
+A multi-step sheet with coordinated height and content transitions. [Specification](skills/fluid-ui/references/patterns/adaptive-step-sheet.md) · [Verification](docs/SHOWCASE.md)
+
+### 04. Fluid Bottom Navigation
+
+[![Fluid Bottom Navigation — conceptual Crystal Motion illustration](docs/images/patterns/fluid-bottom-navigation.svg)](skills/fluid-ui/references/patterns/fluid-bottom-navigation.md)
+
+One shared crystal lens moves and reshapes across tabs. [Specification](skills/fluid-ui/references/patterns/fluid-bottom-navigation.md) · [Verification](docs/SHOWCASE.md)
+
+### 05. Scroll-aware FAB
+
+[![Scroll-aware FAB — conceptual Crystal Motion illustration](docs/images/patterns/scroll-aware-fab.svg)](skills/fluid-ui/references/patterns/scroll-aware-fab.md)
+
+A floating action button that contracts and expands with scrolling. [Specification](skills/fluid-ui/references/patterns/scroll-aware-fab.md) · [Verification](docs/SHOWCASE.md)
+
+### 06. Copy Success Feedback
+
+[![Copy Success Feedback — conceptual Crystal Motion illustration](docs/images/patterns/copy-success-feedback.svg)](skills/fluid-ui/references/patterns/copy-success-feedback.md)
+
+Clipboard feedback that changes shape only after success. [Specification](skills/fluid-ui/references/patterns/copy-success-feedback.md) · [Verification](docs/SHOWCASE.md)
+
+### 07. Animated Form Validation
+
+[![Animated Form Validation — conceptual Crystal Motion illustration](docs/images/patterns/animated-form-validation.svg)](skills/fluid-ui/references/patterns/animated-form-validation.md)
+
+Validation errors unfold with clear accessible feedback. [Specification](skills/fluid-ui/references/patterns/animated-form-validation.md) · [Verification](docs/SHOWCASE.md)
+
+### 08. Anchored Dropdown
+
+[![Anchored Dropdown — conceptual Crystal Motion illustration](docs/images/patterns/anchored-dropdown.svg)](skills/fluid-ui/references/patterns/anchored-dropdown.md)
+
+A menu that emerges from its trigger and restores focus. [Specification](skills/fluid-ui/references/patterns/anchored-dropdown.md) · [Verification](docs/SHOWCASE.md)
+
+### 09. Shared Element Transition
+
+[![Shared Element Transition — conceptual Crystal Motion illustration](docs/images/patterns/shared-element-transition.svg)](skills/fluid-ui/references/patterns/shared-element-transition.md)
+
+A visual element retains identity between screens. [Specification](skills/fluid-ui/references/patterns/shared-element-transition.md) · [Verification](docs/SHOWCASE.md)
+
+### 10. Expandable Search Field
+
+[![Expandable Search Field — conceptual Crystal Motion illustration](docs/images/patterns/expandable-search-field.svg)](skills/fluid-ui/references/patterns/expandable-search-field.md)
+
+A compact search control expands into an editable field. [Specification](skills/fluid-ui/references/patterns/expandable-search-field.md) · [Verification](docs/SHOWCASE.md)
+
+### 11. Elastic Pull to Refresh
+
+[![Elastic Pull to Refresh — conceptual Crystal Motion illustration](docs/images/patterns/elastic-pull-to-refresh.svg)](skills/fluid-ui/references/patterns/elastic-pull-to-refresh.md)
+
+A gesture-driven refresh indicator with elastic resistance. [Specification](skills/fluid-ui/references/patterns/elastic-pull-to-refresh.md) · [Verification](docs/SHOWCASE.md)
+
+### 12. Swipe Actions
+
+[![Swipe Actions — conceptual Crystal Motion illustration](docs/images/patterns/swipe-actions.svg)](skills/fluid-ui/references/patterns/swipe-actions.md)
+
+Contextual actions revealed through controlled swiping. [Specification](skills/fluid-ui/references/patterns/swipe-actions.md) · [Verification](docs/SHOWCASE.md)
+
+### 13. Skeleton Content Transition
+
+[![Skeleton Content Transition — conceptual Crystal Motion illustration](docs/images/patterns/skeleton-content-transition.svg)](skills/fluid-ui/references/patterns/skeleton-content-transition.md)
+
+Loading placeholders transition into stable content. [Specification](skills/fluid-ui/references/patterns/skeleton-content-transition.md) · [Verification](docs/SHOWCASE.md)
+
+### 14. Reaction Microinteraction
+
+[![Reaction Microinteraction — conceptual Crystal Motion illustration](docs/images/patterns/reaction-microinteraction.svg)](skills/fluid-ui/references/patterns/reaction-microinteraction.md)
+
+Small responsive feedback for repeated reactions. [Specification](skills/fluid-ui/references/patterns/reaction-microinteraction.md) · [Verification](docs/SHOWCASE.md)
+
+### 15. Async Button States
+
+[![Async Button States — conceptual Crystal Motion illustration](docs/images/patterns/async-button-states.svg)](skills/fluid-ui/references/patterns/async-button-states.md)
+
+A button morphs through loading, success, and failure. [Specification](skills/fluid-ui/references/patterns/async-button-states.md) · [Verification](docs/SHOWCASE.md)
+
+### 16. Immersive Image Preview
+
+[![Immersive Image Preview — conceptual Crystal Motion illustration](docs/images/patterns/immersive-image-preview.svg)](skills/fluid-ui/references/patterns/immersive-image-preview.md)
+
+A shared image expands into a focused preview. [Specification](skills/fluid-ui/references/patterns/immersive-image-preview.md) · [Verification](docs/SHOWCASE.md)
+
+### 17. Predictive Back Transition
+
+[![Predictive Back Transition — conceptual Crystal Motion illustration](docs/images/patterns/predictive-back-transition.svg)](skills/fluid-ui/references/patterns/predictive-back-transition.md)
+
+Screen motion follows the system back gesture. [Specification](skills/fluid-ui/references/patterns/predictive-back-transition.md) · [Verification](docs/SHOWCASE.md)
+
+### 18. Empty and Error States
+
+[![Empty and Error States — conceptual Crystal Motion illustration](docs/images/patterns/empty-and-error-states.svg)](skills/fluid-ui/references/patterns/empty-and-error-states.md)
+
+Clear recovery actions inside restrained glass surfaces. [Specification](skills/fluid-ui/references/patterns/empty-and-error-states.md) · [Verification](docs/SHOWCASE.md)
+
+### 19. Expandable Content Card
+
+[![Expandable Content Card — conceptual Crystal Motion illustration](docs/images/patterns/expandable-content-card.svg)](skills/fluid-ui/references/patterns/expandable-content-card.md)
+
+A card grows into details while preserving content continuity. [Specification](skills/fluid-ui/references/patterns/expandable-content-card.md) · [Verification](docs/SHOWCASE.md)
+
+### 20. Collapsing Top App Bar
+
+[![Collapsing Top App Bar — conceptual Crystal Motion illustration](docs/images/patterns/collapsing-top-app-bar.svg)](skills/fluid-ui/references/patterns/collapsing-top-app-bar.md)
+
+A title bar compresses smoothly as content scrolls. [Specification](skills/fluid-ui/references/patterns/collapsing-top-app-bar.md) · [Verification](docs/SHOWCASE.md)
 
 ## Liquid Glass v5
 
