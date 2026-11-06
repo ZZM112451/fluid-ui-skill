@@ -8,7 +8,7 @@
 
 **Design interfaces that feel alive.** Fluid UI is a reusable Agent Skill for Codex and other coding agents. It combines deliberate UI design, expressive yet accessible motion, and reliable state-driven interactions. Its optional **Crystal Motion** preset brings almost-clear liquid glass, bright optical edges, soft Aurora backgrounds, and interruptible spring motion to the full 20-pattern design guidance.
 
-**[View all 20 illustrated interactions](docs/SHOWCASE.md)** · **[Explore the interactive demo](demo/crystal-motion/index.html)** · **[Crystal Motion specification](skills/fluid-ui/references/presets/crystal-motion.md)** · **[中文介绍](README.zh-CN.md)**
+**[Open the live demo](https://zzm112451.github.io/fluid-ui-skill/)** · **[View all 20 illustrated interactions](docs/SHOWCASE.md)** · **[Explore the interactive demo](demo/crystal-motion/index.html)** · **[Crystal Motion specification](skills/fluid-ui/references/presets/crystal-motion.md)** · **[中文介绍](README.zh-CN.md)**
 
 
 Fluid UI is an Agent Skill for deliberate UI design and reliable interaction states. It helps coding agents preserve an existing design system, select an appropriate visual style, and validate changes with proportionate motion.
@@ -23,7 +23,7 @@ The new **Crystal Motion** Glass preset adds nearly transparent optical surfaces
 - [Crystal Motion config example](skills/fluid-ui/assets/crystal-motion.config.json)
 - [Rollout and verification checklist](skills/fluid-ui/references/crystal-motion-rollout.md)
 
-Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20-pattern guidance is available; this is not a claim that all 20 patterns have separately implemented and tested Crystal Motion components. See the verification checklist for current limits. Version 1.2.0 is the version recorded in this repository. For published release assets and verification evidence, consult the GitHub Releases page and the verification reports.
+Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20-pattern guidance is available; this is not a claim that all 20 patterns have separately implemented and tested Crystal Motion components. See the verification checklist for current limits. Version 1.2.0 is published: [release package and checksums](https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.2.0), with verification evidence in the [report](docs/verification/report.md).
 
 ## Visual gallery — 20 interactions
 

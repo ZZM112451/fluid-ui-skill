@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Fluid UI — Design interfaces that feel alive</title>
+<meta name="description" content="Fluid UI is an Agent Skill for Codex and other coding agents: deliberate UI design, accessible motion, and reliable state-driven interaction. Crystal Motion v1.2.0.">
+<link rel="icon" href="docs/images/crystal-motion-preview.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="top">
+  <a class="brand" href="./"><span class="mark" aria-hidden="true">≈</span> Fluid UI</a>
+  <nav aria-label="站点导航">
+    <a href="#demos">演示</a>
+    <a href="#patterns">20 种模式</a>
+    <a href="#install">安装</a>
+    <a href="https://github.com/ZZM112451/fluid-ui-skill">GitHub</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <p class="eyebrow"><span class="pill">v1.2.0</span> Crystal Motion · MIT · Codex 为主要验证宿主</p>
+    <h1>Design interfaces<br>that feel alive.</h1>
+    <p class="lede">
+      让界面拥有生命力。Fluid UI 是面向 Codex 等编程 Agent 的 UI 设计与交互增强 Skill：
+      统一的状态驱动交互、可中断的弹簧运动、无障碍与性能规范。
+    </p>
+    <p class="lede muted">
+      下面的三个演示都是真实可交互的页面，不是录屏，也不是渲染图。它们跑在一个仓库里、零运行时依赖，
+      你可以用键盘、触摸和减少动态效果设置去检查同一套状态契约。
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="demo/">打开交互实验台</a>
+      <a class="btn" href="demo/crystal-motion/">Crystal Motion 演示</a>
+      <a class="btn" href="demo/liquid-glass/">Liquid Glass v5 演示</a>
+    </div>
+    <figure class="preview">
+      <img src="docs/images/crystal-motion-preview.svg" alt="Crystal Motion 材质概念示意图：近乎透明的玻璃表面、明亮纤细的高光边缘与柔和的 Aurora 背景">
+      <figcaption>视觉概念示意图，不是浏览器截图。真实材质与动效请看 <a href="demo/crystal-motion/">Crystal Motion 演示</a>。</figcaption>
+    </figure>
+  </section>
+
+  <section id="demos" class="section">
+    <h2><span class="num">01</span> 三个演示，三件不同的事<em class="h2-en">Three demos, three different jobs</em></h2>
+    <div class="cards">
+      <article class="card">
+        <p class="card-tag">交互实验台</p>
+        <h3>同一套状态，切换四种视觉语言</h3>
+        <p class="zh">保存、失败、取消、表单恢复、底部导航、分步弹窗、计时胶囊、复制反馈。切换 Glass / Material 3 / Minimal / Tech 和强度档位，状态契约不变。</p>
+        <p class="en">One state model behind four visual styles and three intensity levels.</p>
+        <p class="look">看点：请求中途点取消、模拟请求失败、打开分步弹窗后按 Esc。</p>
+        <a class="go" href="demo/">进入实验台 <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="card">
+        <p class="card-tag">Crystal Motion · 1.2.0 新增</p>
+        <h3>清透玻璃与可中断的弹簧运动</h3>
+        <p class="zh">高透亮的水晶玻璃材质、纤细的发光边缘、低模糊与 Aurora 背景，配合速度继承、手势追踪和快速反向中断。这是共享透镜导航的可运行参考，不是 20 个现成组件。</p>
+        <p class="en">Opt-in Glass preset: luminous optical edges, restrained blur, interruptible spring motion.</p>
+        <p class="look">看点：连续拖动导航透镜、中途反向、减少动态效果下的降级。</p>
+        <a class="go" href="demo/crystal-motion/">查看 Crystal Motion <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="card">
+        <p class="card-tag">Liquid Glass v5</p>
+        <h3>八种连续形变交互的工程实现</h3>
+        <p class="zh">主题扩散、底部导航、计时胶囊、分步弹窗等八种交互的共享节点形变，并补齐键盘、焦点、中断、真实剪贴板失败与小屏适配。</p>
+        <p class="en">Eight approved morphing interactions with keyboard, focus and interruption safeguards.</p>
+        <p class="look">看点：Tab 走完整个导航、真机剪贴板拒绝、320px 窄屏。</p>
+        <a class="go" href="demo/liquid-glass/">查看 Liquid Glass <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </section>
+
+  <section id="patterns" class="section">
+    <h2><span class="num">02</span> 20 种交互模式<em class="h2-en">Twenty interaction patterns</em></h2>
+    <p class="section-note">
+      每张都是<strong>概念示意图</strong>，不是实现截图。每种模式有独立规范：状态、动画参数、中断、无障碍、性能、平台适配与验收标准。
+      <a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/docs/SHOWCASE.zh-CN.md">查看完整展示与验证状态</a>。
+    </p>
+    <ul class="patterns">
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/theme-reveal.md"><img src="docs/images/patterns/theme-reveal.svg" alt="" loading="lazy"><span>主题扩散<em>Theme Reveal</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/floating-timer-pill.md"><img src="docs/images/patterns/floating-timer-pill.svg" alt="" loading="lazy"><span>浮动计时胶囊<em>Floating Timer Pill</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/adaptive-step-sheet.md"><img src="docs/images/patterns/adaptive-step-sheet.svg" alt="" loading="lazy"><span>自适应分步弹窗<em>Adaptive Step Sheet</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/fluid-bottom-navigation.md"><img src="docs/images/patterns/fluid-bottom-navigation.svg" alt="" loading="lazy"><span>流体底部导航<em>Fluid Bottom Navigation</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/scroll-aware-fab.md"><img src="docs/images/patterns/scroll-aware-fab.svg" alt="" loading="lazy"><span>滚动感知悬浮按钮<em>Scroll-aware FAB</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/copy-success-feedback.md"><img src="docs/images/patterns/copy-success-feedback.svg" alt="" loading="lazy"><span>复制成功反馈<em>Copy Success Feedback</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/animated-form-validation.md"><img src="docs/images/patterns/animated-form-validation.svg" alt="" loading="lazy"><span>表单校验动效<em>Animated Form Validation</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/anchored-dropdown.md"><img src="docs/images/patterns/anchored-dropdown.svg" alt="" loading="lazy"><span>锚定下拉菜单<em>Anchored Dropdown</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/shared-element-transition.md"><img src="docs/images/patterns/shared-element-transition.svg" alt="" loading="lazy"><span>共享元素转场<em>Shared Element Transition</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/expandable-search-field.md"><img src="docs/images/patterns/expandable-search-field.svg" alt="" loading="lazy"><span>可展开搜索框<em>Expandable Search Field</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/elastic-pull-to-refresh.md"><img src="docs/images/patterns/elastic-pull-to-refresh.svg" alt="" loading="lazy"><span>弹性下拉刷新<em>Elastic Pull to Refresh</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/swipe-actions.md"><img src="docs/images/patterns/swipe-actions.svg" alt="" loading="lazy"><span>滑动操作项<em>Swipe Actions</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/skeleton-content-transition.md"><img src="docs/images/patterns/skeleton-content-transition.svg" alt="" loading="lazy"><span>骨架屏到内容<em>Skeleton Content Transition</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/reaction-microinteraction.md"><img src="docs/images/patterns/reaction-microinteraction.svg" alt="" loading="lazy"><span>轻量反馈动效<em>Reaction Microinteraction</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/async-button-states.md"><img src="docs/images/patterns/async-button-states.svg" alt="" loading="lazy"><span>异步按钮状态<em>Async Button States</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/immersive-image-preview.md"><img src="docs/images/patterns/immersive-image-preview.svg" alt="" loading="lazy"><span>沉浸式图片预览<em>Immersive Image Preview</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/predictive-back-transition.md"><img src="docs/images/patterns/predictive-back-transition.svg" alt="" loading="lazy"><span>预测式返回<em>Predictive Back Transition</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/empty-and-error-states.md"><img src="docs/images/patterns/empty-and-error-states.svg" alt="" loading="lazy"><span>空状态与错误态<em>Empty and Error States</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/expandable-content-card.md"><img src="docs/images/patterns/expandable-content-card.svg" alt="" loading="lazy"><span>可展开内容卡片<em>Expandable Content Card</em></span></a></li>
+      <li><a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/skills/fluid-ui/references/patterns/collapsing-top-app-bar.md"><img src="docs/images/patterns/collapsing-top-app-bar.svg" alt="" loading="lazy"><span>折叠顶栏<em>Collapsing Top App Bar</em></span></a></li>
+    </ul>
+  </section>
+
+  <section id="install" class="section">
+    <h2><span class="num">03</span> 怎么用上<em class="h2-en">Install and invoke</em></h2>
+    <div class="install-grid">
+      <div>
+        <h3>从仓库安装 Skill</h3>
+        <pre><code>git clone https://github.com/ZZM112451/fluid-ui-skill.git
+cd fluid-ui-skill
+node scripts/manage.mjs install --agent codex</code></pre>
+        <p class="section-note">默认装到 <code>~/.agents/skills/fluid-ui</code>，项目级安装加 <code>--project &lt;目录&gt;</code>。需要 Node.js 22+。</p>
+      </div>
+      <div>
+        <h3>或者在 Codex 里直接说要什么</h3>
+        <pre><code>使用 $fluid-ui 优化当前表单。保留已有设计系统，
+只改善错误、加载、取消和恢复反馈；
+实施后运行相关测试。</code></pre>
+        <p class="section-note">显式调用 <code>$fluid-ui</code> 是可靠的；自动触发受宿主的描述预算与选择影响。</p>
+      </div>
+    </div>
+    <p class="links">
+      <a href="https://github.com/ZZM112451/fluid-ui-skill/releases">发布包与 SHA256</a>
+      <a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/docs/compatibility.md">兼容矩阵</a>
+      <a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/docs/verification/report.md">验证报告</a>
+      <a href="https://github.com/ZZM112451/fluid-ui-skill">源码</a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>
+    <strong>Fluid UI</strong> · MIT · 2026 ZZM112451。
+    图片是概念示意图；20 种模式是设计规范，Web 演示只实现其中一部分。原生 Android / Flutter / React Native 未验证。
+  </p>
+  <p class="muted">
+    本站是仓库内静态演示页，零运行时依赖，无外部字体、图标与追踪脚本。
+    <a href="https://github.com/ZZM112451/fluid-ui-skill/blob/main/LICENSE">License</a>
+  </p>
+</footer>
+</body>
+</html>

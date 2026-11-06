@@ -1,5 +1,12 @@
 # 更新记录
 
+## 未发布 — 演示站与中文文档补齐
+- 新增 `site/` 演示首页与 `pages.yml` 工作流，把交互实验台、Crystal Motion 和 Liquid Glass v5 三个演示发布到 GitHub Pages，零运行时依赖。
+- 中文 README 补齐到与英文同等的章节：Crystal Motion、20 种模式、Liquid Glass v5、能力、安装、Codex 用法、架构、运行测试、限制与贡献；删除「1.2.0（候选发布）」等与已发布事实不符的措辞。
+- 英文 README 增加在线演示入口，并把 1.2.0 的发布状态改为链接到 Release 资产与校验和。
+- 修正 `demo/index.html` 侧栏遗留的 `v1.0.0` 版本标签。
+- 无 Skill 行为变更；`skills/fluid-ui/` 内容与 1.2.0 一致。
+
 ## 1.2.0 — Crystal Motion 与交互展示更新
 - 在原 1.1.0 基础上新增 Crystal Motion 预设和 20 种交互的独立 SVG 概念效果图，英文/中文展示页与验收状态矩阵。
 - 新增 Crystal Motion Web 导航专项 Playwright 测试，修复核心风格决策器未识别 Crystal Motion 预设的问题。

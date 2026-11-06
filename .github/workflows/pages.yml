@@ -1,0 +1,81 @@
+name: Deploy demo site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'demo/**'
+      - 'docs/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Assemble static site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The published site is the repository itself in read-only form: a small
+      # landing page plus the runnable demos and their illustration assets.
+      # No bundler, no runtime dependencies.
+      - name: Assemble site
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          cp -R site/. _site/
+          cp -R demo _site/demo
+          cp -R docs _site/docs
+          touch _site/.nojekyll
+          echo "--- files ---"
+          find _site -type f | wc -l
+          du -sh _site
+
+      - name: Check landing page references
+        run: |
+          cd _site
+          grep -oE '(href|src)="[^"]+"' index.html \
+            | sed -E 's/.*="//; s/"$//' \
+            | grep -vE '^(https?:|mailto:|#)' \
+            | sort -u > /tmp/refs.txt
+          fail=0
+          while IFS= read -r ref; do
+            [ -n "$ref" ] || continue
+            target="${ref%%#*}"
+            if [ ! -e "$target" ] && [ ! -e "${target%/}/index.html" ]; then
+              echo "missing: $ref"
+              fail=1
+            fi
+          done < /tmp/refs.txt
+          if [ "$fail" -ne 0 ]; then
+            echo "The landing page references files that are not in the published site."
+            exit 1
+          fi
+          echo "landing page references resolve ($(wc -l < /tmp/refs.txt) checked)"
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
