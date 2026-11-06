@@ -1,5 +1,7 @@
 # 交互模式目录
 
+选择 Crystal Motion 时，**本目录全部 20 个模式**都必须叠加 [Crystal Motion 逐模式映射](presets/crystal-motion.md) 的材质、共享几何、速度连续性与降级规则。逐模式原始状态合约仍有效；不要仅将背景换成透明白就称为完成。实施/测试证据按 [推广验收](crystal-motion-rollout.md) 报告。
+
 按需读取本次用到的模式。所有模式同时遵循 [状态与配置合约](decision.md)。以下参数是设计起点，必须测量实际环境；禁用动画仍保留等效交互。
 
 1. [Theme Reveal](patterns/theme-reveal.md)

@@ -1,8 +1,29 @@
 # Fluid UI
 
+**English** · [简体中文](README.zh-CN.md)
+
+![Crystal Motion visual concept — illustrative rendering, not a captured browser screenshot](docs/images/crystal-motion-preview.svg)
+
+> **Visual concept illustration.** The image communicates the Crystal Motion material direction; use the [live Web demo](demo/crystal-motion/index.html) to inspect actual interaction and rendering.
+
+**Design interfaces that feel alive.** Fluid UI is a reusable Agent Skill for Codex and other coding agents. It combines deliberate UI design, expressive yet accessible motion, and reliable state-driven interactions. Its optional **Crystal Motion** preset brings almost-clear liquid glass, bright optical edges, soft Aurora backgrounds, and interruptible spring motion to the full 20-pattern design guidance.
+
+**[Explore the interactive demo](demo/crystal-motion/index.html)** · **[Crystal Motion specification](skills/fluid-ui/references/presets/crystal-motion.md)** · **[中文介绍](README.zh-CN.md)**
+
+
 Fluid UI is an Agent Skill for deliberate UI design and reliable interaction states. It helps coding agents preserve an existing design system, select an appropriate visual style, and validate changes with proportionate motion.
 
-**Version 1.1.0 · MIT · Codex is the primary tested host.** [中文说明](README.zh-CN.md)
+**Skill version 1.1.0 · MIT · Codex is the primary tested host.**
+
+## Crystal Motion — crystal-clear glass and fluid interaction
+
+The new **Crystal Motion** Glass preset adds nearly transparent optical surfaces, fine luminous edge highlights, low blur, and velocity-preserving, interruptible spring motion. Its [implementation contract](skills/fluid-ui/references/presets/crystal-motion.md) maps the material and motion language across **all 20 interaction patterns**, while retaining the existing four styles and Liquid Glass v5.
+
+- [Runnable Crystal Motion navigation demo](demo/crystal-motion/index.html) — interactive Web reference, not a 20-component library.
+- [Crystal Motion config example](skills/fluid-ui/assets/crystal-motion.config.json)
+- [Rollout and verification checklist](skills/fluid-ui/references/crystal-motion-rollout.md)
+
+Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20-pattern guidance is available; this is not a claim that all 20 patterns have separately implemented and tested Crystal Motion components. See the verification checklist for current limits. Skill 1.1.0 remains the version baseline until a separately verified release is packaged.
 
 ## Liquid Glass v5
 

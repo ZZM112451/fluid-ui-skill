@@ -1,5 +1,9 @@
 # 决策与配置
 
+## Crystal Motion 选择规则
+
+`style: "Glass"`、`preset: "Crystal Motion"` 时读取 [Crystal Motion 合约](presets/crystal-motion.md)，并对所有被实施的模式应用其统一材质、可中断弹簧、手势跟踪与可读性降级。用户明确要求其他风格时不得强制启用；Auto 不自动全局玻璃化。与原 Liquid Glass v5 并存，二者是不同预设，不可将 v5 的固定时长误认为 Crystal Motion 的弹簧参数。配置示例见 `assets/crystal-motion.config.json`；在正式发布前不应把示例中的 skillVersion 当作新版本发布证明。
+
 ## 1.1 可选预设
 四个风格值不变；仅当用户明确要求或现有配置指定 `preset: "Liquid Glass"` 时读取 [v5 合约](presets/liquid-glass.md)。该预设仅与 `style: "Glass"` 配套，冲突时明确报错。Auto 未选择它时不得强制八交互或蓝色材质。项目固定 1.0.0 的旧配置继续有效；schemaVersion 仍为 1，升级不自动改写项目文件。显式预设的已批准 motion 参数优先于通用模式的起始建议，仍须无障碍降级。
 
