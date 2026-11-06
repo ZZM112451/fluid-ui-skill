@@ -27,55 +27,55 @@ Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20
 
 ## Approved interactions — live demos and real GIFs
 
-The eight interactions below follow the approved Liquid Glass v5 acceptance contract. Each links to an interactive demo. GIFs are captured from a real Chromium browser by CI, **not AI concept art**. If a GIF is missing, its capture workflow has not yet completed; use the live demo instead.
+The eight interactions below follow the approved Liquid Glass v5 acceptance contract. Each links to an interactive demo. A Chromium-based GIF capture workflow has been added, but its outputs are **not yet verified or embedded**. The live demo is available now; no placeholder images are presented as evidence.
 
 **[Open the eight interactive demos](demo/approved-interactions/index.html)** · [Original approved reference](fluid-ui-v5-handoff/index.html)
 
 ### Fluid bottom navigation
 
-[![Fluid bottom navigation — actual browser capture](docs/images/approved-gifs/navigation.gif)](demo/approved-interactions/index.html#navigation)
+[▶ Fluid bottom navigation](demo/approved-interactions/index.html#navigation)
 
 [Try demo](demo/approved-interactions/index.html#navigation) · [Pattern contract](skills/fluid-ui/references/patterns/fluid-bottom-navigation.md)
 
 ### Circular theme reveal
 
-[![Circular theme reveal — actual browser capture](docs/images/approved-gifs/theme.gif)](demo/approved-interactions/index.html#theme)
+[▶ Circular theme reveal](demo/approved-interactions/index.html#theme)
 
 [Try demo](demo/approved-interactions/index.html#theme) · [Pattern contract](skills/fluid-ui/references/patterns/theme-reveal.md)
 
 ### Floating timer pill
 
-[![Floating timer pill — actual browser capture](docs/images/approved-gifs/timer.gif)](demo/approved-interactions/index.html#timer)
+[▶ Floating timer pill](demo/approved-interactions/index.html#timer)
 
 [Try demo](demo/approved-interactions/index.html#timer) · [Pattern contract](skills/fluid-ui/references/patterns/floating-timer-pill.md)
 
 ### Adaptive step sheet
 
-[![Adaptive step sheet — actual browser capture](docs/images/approved-gifs/sheet.gif)](demo/approved-interactions/index.html#sheet)
+[▶ Adaptive step sheet](demo/approved-interactions/index.html#sheet)
 
 [Try demo](demo/approved-interactions/index.html#sheet) · [Pattern contract](skills/fluid-ui/references/patterns/adaptive-step-sheet.md)
 
 ### Scroll-aware FAB
 
-[![Scroll-aware FAB — actual browser capture](docs/images/approved-gifs/scroll-fab.gif)](demo/approved-interactions/index.html#scroll-fab)
+[▶ Scroll-aware FAB](demo/approved-interactions/index.html#scroll-fab)
 
 [Try demo](demo/approved-interactions/index.html#scroll-fab) · [Pattern contract](skills/fluid-ui/references/patterns/scroll-aware-fab.md)
 
 ### Copy success morph
 
-[![Copy success morph — actual browser capture](docs/images/approved-gifs/clipboard.gif)](demo/approved-interactions/index.html#clipboard)
+[▶ Copy success morph](demo/approved-interactions/index.html#clipboard)
 
 [Try demo](demo/approved-interactions/index.html#clipboard) · [Pattern contract](skills/fluid-ui/references/patterns/copy-success-feedback.md)
 
 ### Animated form validation
 
-[![Animated form validation — actual browser capture](docs/images/approved-gifs/validation.gif)](demo/approved-interactions/index.html#validation)
+[▶ Animated form validation](demo/approved-interactions/index.html#validation)
 
 [Try demo](demo/approved-interactions/index.html#validation) · [Pattern contract](skills/fluid-ui/references/patterns/animated-form-validation.md)
 
 ### Anchored dropdown
 
-[![Anchored dropdown — actual browser capture](docs/images/approved-gifs/dropdown-demo.gif)](demo/approved-interactions/index.html#dropdown-demo)
+[▶ Anchored dropdown](demo/approved-interactions/index.html#dropdown-demo)
 
 [Try demo](demo/approved-interactions/index.html#dropdown-demo) · [Pattern contract](skills/fluid-ui/references/patterns/anchored-dropdown.md)
 
