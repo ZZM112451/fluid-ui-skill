@@ -8,12 +8,12 @@
 
 **Design interfaces that feel alive.** Fluid UI is a reusable Agent Skill for Codex and other coding agents. It combines deliberate UI design, expressive yet accessible motion, and reliable state-driven interactions. Its optional **Crystal Motion** preset brings almost-clear liquid glass, bright optical edges, soft Aurora backgrounds, and interruptible spring motion to the full 20-pattern design guidance.
 
-**[Explore the interactive demo](demo/crystal-motion/index.html)** · **[Crystal Motion specification](skills/fluid-ui/references/presets/crystal-motion.md)** · **[中文介绍](README.zh-CN.md)**
+**[View all 20 illustrated interactions](docs/SHOWCASE.md)** · **[Explore the interactive demo](demo/crystal-motion/index.html)** · **[Crystal Motion specification](skills/fluid-ui/references/presets/crystal-motion.md)** · **[中文介绍](README.zh-CN.md)**
 
 
 Fluid UI is an Agent Skill for deliberate UI design and reliable interaction states. It helps coding agents preserve an existing design system, select an appropriate visual style, and validate changes with proportionate motion.
 
-**Skill version 1.1.0 · MIT · Codex is the primary tested host.**
+**Skill version 1.2.0 · MIT · Codex is the primary tested host.**
 
 ## Crystal Motion — crystal-clear glass and fluid interaction
 
@@ -23,7 +23,16 @@ The new **Crystal Motion** Glass preset adds nearly transparent optical surfaces
 - [Crystal Motion config example](skills/fluid-ui/assets/crystal-motion.config.json)
 - [Rollout and verification checklist](skills/fluid-ui/references/crystal-motion-rollout.md)
 
-Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20-pattern guidance is available; this is not a claim that all 20 patterns have separately implemented and tested Crystal Motion components. See the verification checklist for current limits. Skill 1.1.0 remains the version baseline until a separately verified release is packaged.
+Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20-pattern guidance is available; this is not a claim that all 20 patterns have separately implemented and tested Crystal Motion components. See the verification checklist for current limits. Version 1.2.0 is staged for release, pending successful automated checks and release packaging.
+
+## Visual gallery — 20 interactions
+
+[![Theme Reveal concept](docs/images/patterns/theme-reveal.svg)](docs/SHOWCASE.md)
+[![Floating Timer Pill concept](docs/images/patterns/floating-timer-pill.svg)](docs/SHOWCASE.md)
+[![Fluid Bottom Navigation concept](docs/images/patterns/fluid-bottom-navigation.svg)](docs/SHOWCASE.md)
+[![Adaptive Step Sheet concept](docs/images/patterns/adaptive-step-sheet.svg)](docs/SHOWCASE.md)
+
+**[Browse all 20 individually illustrated patterns, acceptance criteria, and verification status](docs/SHOWCASE.md)**. These are conceptual illustrations, not captured evidence of 20 runnable components.
 
 ## Liquid Glass v5
 
