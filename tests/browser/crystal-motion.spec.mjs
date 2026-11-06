@@ -12,9 +12,9 @@ test.describe('Crystal Motion reference',()=>{
     await expect.poll(async()=>lens.evaluate(el=>{const x=Number(new DOMMatrix(getComputedStyle(el).transform).m41);return Number.isFinite(x)&&el.getBoundingClientRect().width>20})).toBeTruthy();
   });
   test('changes material controls and motion response',async({page})=>{
-    await page.locator('#transparency').fill('90');await expect(page.locator('#transparency-value')).toHaveText('90%');
-    await page.locator('#shine').fill('60');await expect(page.locator('#shine-value')).toHaveText('60%');
-    await page.locator('#blur').fill('0');await expect(page.locator('#blur-value')).toHaveText('0px');
+    await page.locator('#transparency').evaluate(el=>{el.value='90';el.dispatchEvent(new Event('input',{bubbles:true}))});await expect(page.locator('#transparency-value')).toHaveText('90%');
+    await page.locator('#shine').evaluate(el=>{el.value='60';el.dispatchEvent(new Event('input',{bubbles:true}))});await expect(page.locator('#shine-value')).toHaveText('60%');
+    await page.locator('#blur').evaluate(el=>{el.value='0';el.dispatchEvent(new Event('input',{bubbles:true}))});await expect(page.locator('#blur-value')).toHaveText('0px');
     await page.getByRole('button',{name:'Snappy'}).click();await expect(page.getByRole('button',{name:'Snappy'})).toHaveAttribute('aria-pressed','true');
   });
   test('supports keyboard arrows',async({page})=>{
