@@ -4,6 +4,16 @@ Fluid UI is an Agent Skill for deliberate UI design and reliable interaction sta
 
 **Version 1.1.0 · MIT · Codex is the primary tested host.** [中文说明](README.zh-CN.md)
 
+## Crystal Motion — full Skill guidance (development branch)
+
+The new **Crystal Motion** Glass preset adds nearly transparent optical surfaces, fine luminous edge highlights, low blur, and velocity-preserving, interruptible spring motion. Its [implementation contract](skills/fluid-ui/references/presets/crystal-motion.md) maps the material and motion language across **all 20 interaction patterns**, while retaining the existing four styles and Liquid Glass v5.
+
+- [Runnable Crystal Motion navigation demo](demo/crystal-motion/index.html) — interactive Web reference, not a 20-component library.
+- [Crystal Motion config example](skills/fluid-ui/assets/crystal-motion.config.json)
+- [Rollout and verification checklist](skills/fluid-ui/references/crystal-motion-rollout.md)
+
+Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. This branch is **unreleased**: all-pattern guidance is present, but each pattern still needs implementation and verification before claiming production readiness. Existing Skill 1.1.0 remains the version baseline.
+
 ## Liquid Glass v5
 
 Version 1.1.0 adds an **opt-in Liquid Glass preset under Glass**, preserving the original four styles and twenty patterns. Design v5 and Skill version 1.1.0 are different version axes. The approved [handoff](fluid-ui-v5-handoff/ACCEPTANCE.md) and [runnable reference](fluid-ui-v5-handoff/index.html) are preserved without modification. The [engineering demo](demo/liquid-glass/index.html) adds keyboard, focus, interruption, real clipboard failure and responsive safeguards while retaining all eight approved morphing interactions.
