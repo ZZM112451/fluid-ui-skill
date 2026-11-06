@@ -3,8 +3,8 @@ export const intensities = ['Subtle','Balanced','Expressive'];
 export function decide({requestedStyle,existingStyle,requestedPreset,existingPreset,product,platform,intensity='Balanced',mode='Auto'}={}) {
   if (!intensities.includes(intensity) || !['Auto','Preset','Hybrid'].includes(mode)) throw Error('无效模式或强度');
   for (const style of [requestedStyle,existingStyle]) if (style && !styles.includes(style)) throw Error('未知风格；请保留项目自有设计并记录映射');
-  for(const preset of [requestedPreset,existingPreset])if(preset&&preset!=='Liquid Glass')throw Error('未知预设');
-  if(requestedPreset&&requestedStyle&&requestedStyle!=='Glass')throw Error('Liquid Glass 仅适用于 Glass');
+  for(const preset of [requestedPreset,existingPreset])if(preset&&!['Liquid Glass','Crystal Motion'].includes(preset))throw Error('未知预设');
+  if(requestedPreset&&requestedStyle&&requestedStyle!=='Glass')throw Error('Glass 预设仅适用于 Glass');
   const style=requestedStyle||(requestedPreset?'Glass':existingStyle)||(platform==='android'?'Material 3':'Minimal');
   const preset=requestedPreset||(style==='Glass'?existingPreset:undefined);
   return {style,preset,intensity,mode,reason:requestedStyle||requestedPreset?'用户指定':existingStyle?'保留现有设计系统':platform==='android'?'优先 Android 原生规范':product==='dashboard'?'高信息密度优先清晰与稳定':'默认以内容与操作为主'};
