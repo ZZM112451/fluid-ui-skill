@@ -10,6 +10,12 @@ metadata:
 
 在项目原有业务、导航与设计系统上改善界面质量。风格选择和动画数量不是质量证据。
 
+## Crystal Motion 全交互预设
+
+当用户明确指定 Crystal Motion、Crystal Glass、极致通透水晶玻璃或项目已有该预设时，使用 `style: "Glass"`、`preset: "Crystal Motion"`。**必须先读** [Crystal Motion 全交互材质与运动合约](references/presets/crystal-motion.md)，再按任务加载 [20 模式目录](references/patterns.md) 的相关模式和 [推广验收](references/crystal-motion-rollout.md)。优先使用清透水晶材质、细亮高光、低模糊、连续可中断弹簧和手势追踪；同时遵守对比度、无障碍和性能降级。默认参考为 95% 通透、95% 高光、3px 模糊，非跨平台保证。可运行的 [Web 参考](../../demo/crystal-motion/index.html) 是导航实验台，不代表 20 个模式已实现。
+
+**用户明确要求 > 现有项目设计系统 > 风格预设**。不将 Crystal Motion 强制应用于普通 Auto 请求，不覆盖原 Liquid Glass v5。所有 20 模式都有 Crystal Motion 适配规范，但实际代码与验证仍须逐项交付。
+
 ## Liquid Glass v5 可选预设
 
 仅在用户指定 Liquid Glass、液态玻璃或项目已有该预设时启用；保留 Glass、Material 3、Minimal、Tech 四个风格，不在 Auto 下强制玻璃化。使用 `style: "Glass"`、`preset: "Liquid Glass"`，强度仍独立。此时先读 [Liquid Glass 与八交互合约](references/presets/liquid-glass.md)，涉及形变再读 [连续状态形变](references/morphing.md)。项目有批准的 HTML 原型时先运行和检查其中间态，不用想象的截图替换行为依据。
