@@ -1,5 +1,13 @@
 # 更新记录
 
+## 未发布 — Crystal Motion 规范推广（开发分支）
+- 新增高透亮 Crystal Motion 预设，覆盖全部 20 个交互模式的材质与运动实施规范；保留原 Liquid Glass v5 和四种基础风格。
+- 新增独立 Web 导航实验台、材质配置样例与分级验收清单。
+- 当前是开发中规范和参考演示，不是新 Skill Release；20 个模式的可运行实现及多平台真机验证仍未完成。
+- 为避免破坏旧安装，暂不改变 Skill 1.1.0 的版本号、schemaVersion 或正式发布状态。
+
+
+
 ## 1.1.0 2026-11-04
 - 根据批准的 Fluid UI v5 handoff 增加 Glass 的可选 Liquid Glass 预设；不是第五种风格，也不强制 Auto 使用。
 - 保留原四风格、20 交互模式和 1.x 配置，增加 schemaVersion 1 的可选 preset 字段与冲突检查。
