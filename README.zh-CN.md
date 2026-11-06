@@ -18,7 +18,16 @@
 - **兼容**：保留 Liquid Glass v5、原四种风格与既有项目设计系统；不强制 Auto 玻璃化。
 
 
-面向编程 Agent 的 UI 设计与交互增强 Skill。优先保留项目既有设计系统与业务，只在有价值的位置使用动效。名称 fluid-ui，版本 1.1.0，许可证 MIT。
+面向编程 Agent 的 UI 设计与交互增强 Skill。优先保留项目既有设计系统与业务，只在有价值的位置使用动效。名称 fluid-ui，版本 1.2.0（候选发布），许可证 MIT。
+
+## 20 种交互独立效果展示
+
+[![主题扩散概念图](docs/images/patterns/theme-reveal.svg)](docs/SHOWCASE.zh-CN.md)
+[![计时胶囊概念图](docs/images/patterns/floating-timer-pill.svg)](docs/SHOWCASE.zh-CN.md)
+[![流体导航概念图](docs/images/patterns/fluid-bottom-navigation.svg)](docs/SHOWCASE.zh-CN.md)
+[![分步弹窗概念图](docs/images/patterns/adaptive-step-sheet.svg)](docs/SHOWCASE.zh-CN.md)
+
+**[查看全部 20 张独立交互示意图、验收要点与验证状态](docs/SHOWCASE.zh-CN.md)**。图片是概念示意，不代表全部组件已经实现或通过测试。
 
 ## 已确认的 Liquid Glass v5
 设计版本 v5 对应兼容增强版 Skill 1.1.0。原四风格、20 模式和旧配置保留；Liquid Glass 仅作为 Glass 的显式预设，不自动覆盖现有项目。项目配置设置 `style: "Glass", preset: "Liquid Glass"`，强度独立。
