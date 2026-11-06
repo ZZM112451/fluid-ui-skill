@@ -1,0 +1,74 @@
+name: Publish Fluid UI Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verify on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Check release version
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          node -e "const fs=require('node:fs');const v=fs.readFileSync('VERSION','utf8').trim();const p=require('./package.json').version;const s=fs.readFileSync('skills/fluid-ui/VERSION','utf8').trim();if('v'+v!==process.env.RELEASE_TAG||p!==v||s!==v){console.error('Version mismatch', {tag:process.env.RELEASE_TAG,version:v,package:p,skill:s});process.exit(1)}"
+      - run: npm test
+      - run: npm run validate
+      - run: npm audit --audit-level=moderate
+      - run: npm run scan
+      - name: Check script syntax
+        shell: bash
+        run: |
+          bash -n scripts/install.sh
+          for file in scripts/*.mjs demo/*.mjs; do node --check "$file"; done
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:web
+      - run: npm run package
+
+  publish:
+    name: Publish verified release
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run package
+      - name: Verify package checksum
+        run: cd dist && sha256sum --check SHA256SUMS
+      - name: Create release with assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$RELEASE_TAG" dist/*.zip dist/SHA256SUMS \
+            --title "Fluid UI Skill $RELEASE_TAG" \
+            --generate-notes \
+            --verify-tag
