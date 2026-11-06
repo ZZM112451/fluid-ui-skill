@@ -43,6 +43,13 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run test:web
       - run: npm run package
+      - name: Upload tested package
+        if: matrix.os == 'ubuntu-latest'
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-package
+          path: dist/
+          if-no-files-found: error
 
   publish:
     name: Publish verified release
@@ -51,24 +58,31 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      # Publish the exact archive the verify job tested instead of rebuilding it,
+      # so the released checksum always describes the artifact that passed CI.
+      - name: Download tested package
+        uses: actions/download-artifact@v4
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: npm
-      - run: npm ci
-      - run: npm run package
+          name: release-package
+          path: dist
       - name: Verify package checksum
         run: cd dist && sha256sum --check SHA256SUMS
-      - name: Create release with assets
+      - name: Publish release assets
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           RELEASE_TAG: ${{ github.ref_name }}
         run: |
-          gh release create "$RELEASE_TAG" dist/*.zip dist/SHA256SUMS \
-            --title "Fluid UI Skill $RELEASE_TAG" \
-            --generate-notes \
-            --verify-tag
+          set -euo pipefail
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            # A release for this tag was created by hand (or by an earlier run of
+            # this workflow), so `gh release create` would fail with
+            # "a release with the same tag name already exists". Upload onto the
+            # existing release instead, and keep its hand-written notes.
+            gh release upload "$RELEASE_TAG" dist/*.zip dist/SHA256SUMS --clobber
+          else
+            gh release create "$RELEASE_TAG" dist/*.zip dist/SHA256SUMS \
+              --title "Fluid UI Skill $RELEASE_TAG" \
+              --generate-notes \
+              --verify-tag
+          fi
