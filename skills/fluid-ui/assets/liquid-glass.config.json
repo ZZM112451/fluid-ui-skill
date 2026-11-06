@@ -1,11 +1,26 @@
 {
   "schemaVersion": 1,
-  "skillVersion": "1.1.0",
+  "skillVersion": "1.2.0",
   "mode": "Preset",
   "style": "Glass",
   "preset": "Liquid Glass",
   "intensity": "Balanced",
-  "tokens": {"accent": "#307eae", "success": "#168e76", "cardRadius": 25, "navRadius": 25, "buttonRadius": 14},
-  "motion": {"morphMs": 520, "themeRevealMs": 720, "feedbackMs": 350, "feedbackDwellMs": 2200, "easing": "cubic-bezier(.22,1,.36,1)"},
-  "exceptions": ["减少动态效果直接应用目标状态", "语义文字色需根据合成背景验证对比度"]
+  "tokens": {
+    "accent": "#307eae",
+    "success": "#168e76",
+    "cardRadius": 25,
+    "navRadius": 25,
+    "buttonRadius": 14
+  },
+  "motion": {
+    "morphMs": 520,
+    "themeRevealMs": 720,
+    "feedbackMs": 350,
+    "feedbackDwellMs": 2200,
+    "easing": "cubic-bezier(.22,1,.36,1)"
+  },
+  "exceptions": [
+    "减少动态效果直接应用目标状态",
+    "语义文字色需根据合成背景验证对比度"
+  ]
 }

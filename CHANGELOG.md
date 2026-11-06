@@ -1,5 +1,13 @@
 # 更新记录
 
+## 1.2.0 — 候选发布（待验证）
+- 在原 1.1.0 基础上新增 Crystal Motion 预设和 20 种交互的独立 SVG 概念效果图，英文/中文展示页与验收状态矩阵。
+- 新增 Crystal Motion Web 导航专项 Playwright 测试，修复核心风格决策器未识别 Crystal Motion 预设的问题。
+- 更新仓库、Skill、示例配置与 npm 包版本为 1.2.0；正式 GitHub Release 与测试结果仍待确认。
+- 图片是概念示意，不是浏览器截图；尚未将 20 个模式全部实现为可运行的 Crystal Motion 组件。
+
+
+
 ## 未发布 — Crystal Motion 规范推广（开发分支）
 - 新增高透亮 Crystal Motion 预设，覆盖全部 20 个交互模式的材质与运动实施规范；保留原 Liquid Glass v5 和四种基础风格。
 - 新增独立 Web 导航实验台、材质配置样例与分级验收清单。
