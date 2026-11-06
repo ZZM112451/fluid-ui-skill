@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-06",
+  "repository": "https://github.com/ZZM112451/fluid-ui-skill",
+  "release": "https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.2.0",
+  "tag": "v1.2.0",
+  "commit": "7608b5f8939579b26db931ba2deb8979732b5a9a",
+  "version": "1.2.0",
+  "tagRun": {
+    "url": "https://github.com/ZZM112451/fluid-ui-skill/actions/runs/42180321897",
+    "verifyUbuntu": "success",
+    "verifyWindows": "success",
+    "publish": "failure",
+    "publishError": "a release with the same tag name already exists: v1.2.0"
+  },
+  "publishFix": {
+    "pullRequest": "https://github.com/ZZM112451/fluid-ui-skill/pull/5",
+    "mergeCommit": "b80c414",
+    "approach": "verify 上传 release-package 工件；publish 下载同一工件，gh release view 存在则 upload --clobber，否则 create --verify-tag"
+  },
+  "package": {
+    "name": "fluid-ui-skill-v1.2.0.zip",
+    "files": 223,
+    "bytes": 4371716,
+    "sha256": "d0865e60570333835cfdc905ea6dd554afea4988a03ba22cd58bf28bb12ce944",
+    "redownloadedAndMatched": true,
+    "githubDigestMatched": true,
+    "build": "从标签 7608b5f 重新打包；CI 工件的哈希不同，因为 test:web 在打包前重写了 docs/verification/browser-results.json"
+  },
+  "assets": [
+    "fluid-ui-skill-v1.2.0.zip",
+    "SHA256SUMS",
+    "publication-report-v1.2.0.zh-CN.md",
+    "publication-verification-v1.2.0.json"
+  ],
+  "verification": {
+    "core": 32,
+    "browser": 32,
+    "browserBreakdown": {
+      "crystal-motion": 5,
+      "demo": 11,
+      "liquid-glass": 15,
+      "trial": 1
+    },
+    "dependencyAuditFindings": 0,
+    "secretScanFindings": 0
+  },
+  "limitations": [
+    "20 种模式的 SVG 是概念示意，不是实现截图；Crystal Motion 的可运行参考只有共享透镜导航",
+    "原生 Compose/Flutter/React Native、其他 Agent、macOS、人工读屏与真机 GPU 未验证",
+    "不承诺每次自动触发；自动选择依赖宿主描述预算与模型选择",
+    "本报告在发布后补记到主分支，不在 v1.2.0 包内"
+  ]
+}
