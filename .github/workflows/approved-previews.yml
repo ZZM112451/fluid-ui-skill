@@ -1,0 +1,42 @@
+name: Generate approved interaction GIF previews
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - release/crystal-motion-1.2
+    paths:
+      - 'demo/approved-interactions/**'
+      - 'scripts/generate-approved-gifs.mjs'
+      - '.github/workflows/approved-previews.yml'
+permissions:
+  contents: write
+jobs:
+  capture:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: python3 -m pip install --user Pillow
+      - name: Start local demo server
+        run: |
+          node scripts/serve.mjs > /tmp/fluid-preview-server.log 2>&1 &
+          sleep 3
+      - name: Capture actual browser GIFs
+        run: node scripts/generate-approved-gifs.mjs
+      - name: Commit real demo captures
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/images/approved-gifs/
+          if ! git diff --cached --quiet; then
+            git commit -m "docs(previews): capture eight actual browser interaction GIFs"
+            git push
+          fi
