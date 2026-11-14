@@ -42,7 +42,19 @@ jobs:
           for file in scripts/*.mjs demo/*.mjs; do node --check "$file"; done
       - run: npx playwright install --with-deps chromium
       - run: npm run test:web
+      - run: npm run test:site
       - run: npm run package
+      - run: npm run test:package
+      - name: Upload verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-evidence-${{ matrix.os }}
+          path: |
+            test-results/browser/results.json
+            test-results/site/
+            test-results/package-browser/results.json
+            test-results/package-verification.json
       - name: Upload tested package
         if: matrix.os == 'ubuntu-latest'
         uses: actions/upload-artifact@v4

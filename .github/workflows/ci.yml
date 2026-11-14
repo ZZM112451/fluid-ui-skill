@@ -28,12 +28,13 @@ jobs:
           for file in scripts/*.mjs demo/*.mjs; do node --check "$file"; done
       - run: npx playwright install --with-deps chromium
       - run: npm run test:web
+      - run: npm run test:site
       - run: npm run package
+      - run: npm run test:package
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: evidence-${{ matrix.os }}
           path: |
-            docs/verification/browser-results.json
             test-results/
             dist/

@@ -4,11 +4,11 @@
 
 ![Crystal Motion visual concept — illustrative rendering, not a captured browser screenshot](docs/images/crystal-motion-preview.svg)
 
-> **Visual concept illustration.** The image communicates the Crystal Motion material direction; use the [live Web demo](demo/crystal-motion/index.html) to inspect actual interaction and rendering.
+> **Visual concept illustration.** The image communicates the Crystal Motion material direction; use the [live Web demo](https://zzm112451.github.io/fluid-ui-skill/demo/crystal-motion/) to inspect actual interaction and rendering.
 
 **Design interfaces that feel alive.** Fluid UI is a reusable Agent Skill for Codex and other coding agents. It combines deliberate UI design, expressive yet accessible motion, and reliable state-driven interactions. Its optional **Crystal Motion** preset brings almost-clear liquid glass, bright optical edges, soft Aurora backgrounds, and interruptible spring motion to the full 20-pattern design guidance.
 
-**[Open the live demo](https://zzm112451.github.io/fluid-ui-skill/)** · **[View all 20 illustrated interactions](docs/SHOWCASE.md)** · **[Explore the interactive demo](demo/crystal-motion/index.html)** · **[Crystal Motion specification](skills/fluid-ui/references/presets/crystal-motion.md)** · **[中文介绍](README.zh-CN.md)**
+**[Open the live demo](https://zzm112451.github.io/fluid-ui-skill/)** · **[View all 20 illustrated interactions](docs/SHOWCASE.md)** · **[Explore the interactive demo](https://zzm112451.github.io/fluid-ui-skill/demo/crystal-motion/)** · **[Crystal Motion specification](skills/fluid-ui/references/presets/crystal-motion.md)** · **[中文介绍](README.zh-CN.md)**
 
 
 Fluid UI is an Agent Skill for deliberate UI design and reliable interaction states. It helps coding agents preserve an existing design system, select an appropriate visual style, and validate changes with proportionate motion.
@@ -19,11 +19,11 @@ Fluid UI is an Agent Skill for deliberate UI design and reliable interaction sta
 
 The new **Crystal Motion** Glass preset adds nearly transparent optical surfaces, fine luminous edge highlights, low blur, and velocity-preserving, interruptible spring motion. Its [implementation contract](skills/fluid-ui/references/presets/crystal-motion.md) maps the material and motion language across **all 20 interaction patterns**, while retaining the existing four styles and Liquid Glass v5.
 
-- [Runnable Crystal Motion navigation demo](demo/crystal-motion/index.html) — interactive Web reference, not a 20-component library.
+- [Runnable Crystal Motion navigation demo](https://zzm112451.github.io/fluid-ui-skill/demo/crystal-motion/) — interactive Web reference, not a 20-component library.
 - [Crystal Motion config example](skills/fluid-ui/assets/crystal-motion.config.json)
 - [Rollout and verification checklist](skills/fluid-ui/references/crystal-motion-rollout.md)
 
-Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20-pattern guidance is available; this is not a claim that all 20 patterns have separately implemented and tested Crystal Motion components. See the verification checklist for current limits. Version 1.2.0 is published: [release package and checksums](https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.2.0), with verification evidence in the [report](docs/verification/report.md).
+Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20-pattern guidance is available; this is not a claim that all 20 patterns have separately implemented and tested Crystal Motion components. See the verification checklist for current limits. Version 1.2.0 is published: [release package and checksums](https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.2.0), with verification evidence in the [report](docs/verification/README.md).
 
 ## Visual gallery — 20 interactions
 
@@ -36,7 +36,7 @@ Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20
 
 ## Liquid Glass v5
 
-Version 1.1.0 adds an **opt-in Liquid Glass preset under Glass**, preserving the original four styles and twenty patterns. Design v5 and Skill version 1.1.0 are different version axes. The approved [handoff](fluid-ui-v5-handoff/ACCEPTANCE.md) and [runnable reference](fluid-ui-v5-handoff/index.html) are preserved without modification. The [engineering demo](demo/liquid-glass/index.html) adds keyboard, focus, interruption, real clipboard failure and responsive safeguards while retaining all eight approved morphing interactions.
+Version 1.1.0 adds an **opt-in Liquid Glass preset under Glass**, preserving the original four styles and twenty patterns. Design v5 and Skill version 1.1.0 are different version axes. The approved [handoff](fluid-ui-v5-handoff/ACCEPTANCE.md) and [runnable reference](fluid-ui-v5-handoff/index.html) are preserved without modification. The [engineering demo](https://zzm112451.github.io/fluid-ui-skill/demo/liquid-glass/) adds keyboard, focus, interruption, real clipboard failure and responsive safeguards while retaining all eight approved morphing interactions.
 
 Run `npm run dev`, then open `http://127.0.0.1:4173/demo/liquid-glass/`. Use `style: "Glass", preset: "Liquid Glass"`; Auto will not force it on unrelated UI work. See [configuration](skills/fluid-ui/assets/liquid-glass.config.json), [morphing contract](skills/fluid-ui/references/morphing.md), and [1.1.0 verification](docs/verification/v1.1.0/report.md). Native/mobile equivalence is unverified. The three appearance menu items show selection state, not three separate material engines.
 
@@ -51,7 +51,7 @@ Run `npm run dev`, then open `http://127.0.0.1:4173/demo/liquid-glass/`. Use `st
 
 ## Install
 
-The repository is the authoritative distribution source: [ZZM112451/fluid-ui-skill](https://github.com/ZZM112451/fluid-ui-skill). Publication state and evidence are tracked in [verification](docs/verification/report.md); a URL alone does not establish a published release.
+The repository is the authoritative distribution source: [ZZM112451/fluid-ui-skill](https://github.com/ZZM112451/fluid-ui-skill). Publication state and evidence are tracked in [verification](docs/verification/README.md); a URL alone does not establish a published release.
 
 Clone the repository, inspect the scripts, then run with Node.js 22+:
 
@@ -95,12 +95,14 @@ npm test
 npm run validate
 npx playwright install chromium
 npm run test:web
+npm run test:site
 npm audit
 npm run scan
 npm run package
+npm run test:package
 ```
 
-For an existing local Chromium, set `FLUID_CHROMIUM` to its executable. The [test report](docs/verification/report.md) distinguishes structure, execution, visual inspection, host invocation and unverified platforms. [Comparison study](docs/verification/comparison.md) retains five baseline/enhanced tasks and a representative existing-project trial; it does not promise a universal improvement.
+For an existing local Chromium, set `FLUID_CHROMIUM` to its executable. The [test report](docs/verification/README.md) distinguishes structure, execution, visual inspection, host invocation and unverified platforms. [Comparison study](docs/verification/comparison.md) retains five baseline/enhanced tasks and a representative existing-project trial; it does not promise a universal improvement.
 
 ## Limits and contributions
 

@@ -34,7 +34,7 @@
 
 **验收重点：** Rapid reversal, drag, keyboard and shared lens。
 
-**验证状态：** 已添加自动化测试，尚待执行。
+**验证状态：** Ubuntu / Windows 浏览器自动化均 5/5 通过；设备验证未完成。见 [v1.2.0 证据](verification/v1.2.0/publication-report-v1.2.0.zh-CN.md)。
 
 ## 5. Scroll-aware FAB
 

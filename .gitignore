@@ -2,6 +2,7 @@ node_modules/
 test-results/
 playwright-report/
 dist/
+_site/
 .eval-work/
 .taste-skill/
 *.log
