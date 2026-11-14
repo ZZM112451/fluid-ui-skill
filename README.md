@@ -34,6 +34,8 @@ Use `style: "Glass", preset: "Crystal Motion"` when explicitly requested. The 20
 
 **[Browse all 20 individually illustrated patterns, acceptance criteria, and verification status](docs/SHOWCASE.md)**. These are conceptual illustrations, not captured evidence of 20 runnable components.
 
+Actual browser captures of the implemented demos: [runtime screenshots](docs/RUNTIME_SHOWCASE.md). These are separate from the concept illustrations above.
+
 ## Liquid Glass v5
 
 Version 1.1.0 adds an **opt-in Liquid Glass preset under Glass**, preserving the original four styles and twenty patterns. Design v5 and Skill version 1.1.0 are different version axes. The approved [handoff](fluid-ui-v5-handoff/ACCEPTANCE.md) and [runnable reference](fluid-ui-v5-handoff/index.html) are preserved without modification. The [engineering demo](https://zzm112451.github.io/fluid-ui-skill/demo/liquid-glass/) adds keyboard, focus, interruption, real clipboard failure and responsive safeguards while retaining all eight approved morphing interactions.

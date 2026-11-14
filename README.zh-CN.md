@@ -4,7 +4,7 @@
 
 ![Crystal Motion 视觉概念示意图，非浏览器实测截图](docs/images/crystal-motion-preview.svg)
 
-> **图片是视觉概念示意，不是浏览器实际截图。** 真实交互和材质渲染请看 [在线演示站](https://zzm112451.github.io/fluid-ui-skill/) 或本地运行 [Crystal Motion Web 演示](https://zzm112451.github.io/fluid-ui-skill/demo/crystal-motion/)。
+> **图片是视觉概念示意，不是浏览器实际截图。** 真实交互和材质渲染请看 [在线演示站](https://zzm112451.github.io/fluid-ui-skill/) 或直接打开 [Crystal Motion Web 演示](https://zzm112451.github.io/fluid-ui-skill/demo/crystal-motion/)。
 
 **让界面拥有生命力。** Fluid UI 是面向 Codex 等编程 Agent 的可复用 UI 设计与交互增强 Skill，把克制的界面设计、有表现力但仍然无障碍的运动，以及可靠的状态驱动交互组合在一起。可选的 **Crystal Motion** 预设为全部 20 种交互模式提供近乎透明的液态玻璃、明亮的光学边缘、柔和 Aurora 背景与可中断的弹簧运动。
 
@@ -34,6 +34,8 @@ Fluid UI 帮助编程 Agent 保留既有设计系统、选择合适的视觉风�
 [![自适应分步弹窗概念图](docs/images/patterns/adaptive-step-sheet.svg)](docs/SHOWCASE.zh-CN.md)
 
 **[查看全部 20 张示意图、验收要点与验证状态](docs/SHOWCASE.zh-CN.md)**。这些是概念示意图，不要据此声称已有 20 个可运行组件。
+
+已实现演示的实际浏览器画面见 [真实运行截图](docs/RUNTIME_SHOWCASE.md)，与上方概念图分别标注。
 
 ## Liquid Glass v5
 
