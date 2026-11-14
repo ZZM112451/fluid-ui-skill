@@ -9,7 +9,10 @@
     "test:web": "playwright test",
     "validate": "node scripts/validate.mjs",
     "scan": "node scripts/scan.mjs",
-    "package": "node scripts/package.mjs"
+    "package": "node scripts/package.mjs",
+    "build:site": "node scripts/build-site.mjs",
+    "test:site": "npm run build:site && playwright test --config playwright.site.config.mjs",
+    "test:package": "node scripts/verify-package.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.11.1",

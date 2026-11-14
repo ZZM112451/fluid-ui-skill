@@ -34,12 +34,12 @@
   ],
   "verification": {
     "core": 32,
-    "browser": 32,
+    "browser": 46,
     "browserBreakdown": {
       "crystal-motion": 5,
-      "demo": 11,
-      "liquid-glass": 15,
-      "trial": 1
+      "demo": 22,
+      "liquid-glass": 17,
+      "trial": 2
     },
     "dependencyAuditFindings": 0,
     "secretScanFindings": 0
@@ -48,6 +48,21 @@
     "20 种模式的 SVG 是概念示意，不是实现截图；Crystal Motion 的可运行参考只有共享透镜导航",
     "原生 Compose/Flutter/React Native、其他 Agent、macOS、人工读屏与真机 GPU 未验证",
     "不承诺每次自动触发；自动选择依赖宿主描述预算与模型选择",
-    "本报告在发布后补记到主分支，不在 v1.2.0 包内"
-  ]
+    "本报告在发布后补记到主分支，不在 v1.2.0 包内",
+    "最终 Release ZIP 为标签重建包，不是 CI 测试后的同一份字节；本勘误不替换历史 Release 资产"
+  ],
+  "correctedOn": "2026-11-14",
+  "ciPackages": {
+    "ubuntu": {
+      "bytes": 4372606,
+      "files": 223,
+      "sha256": "e05560dbf326a6c1ea6df2b49ed299811237d50b41e9be730b0d4a6e285c50b2",
+      "job": "https://github.com/ZZM112451/fluid-ui-skill/actions/runs/42180321897/job/127768174985"
+    },
+    "windows": {
+      "bytes": 4372621,
+      "files": 223,
+      "job": "https://github.com/ZZM112451/fluid-ui-skill/actions/runs/42180321897/job/127768174750"
+    }
+  }
 }

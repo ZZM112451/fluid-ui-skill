@@ -7,6 +7,13 @@ on:
       - 'site/**'
       - 'demo/**'
       - 'docs/**'
+      - 'skills/fluid-ui/scripts/**'
+      - 'scripts/build-site.mjs'
+      - 'scripts/serve.mjs'
+      - 'scripts/manage.mjs'
+      - 'tests/site/**'
+      - 'playwright.site.config.mjs'
+      - 'package*.json'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -24,42 +31,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # The published site is the repository itself in read-only form: a small
-      # landing page plus the runnable demos and their illustration assets.
-      # No bundler, no runtime dependencies.
-      - name: Assemble site
-        run: |
-          set -euo pipefail
-          mkdir -p _site
-          cp -R site/. _site/
-          cp -R demo _site/demo
-          cp -R docs _site/docs
-          touch _site/.nojekyll
-          echo "--- files ---"
-          find _site -type f | wc -l
-          du -sh _site
-
-      - name: Check landing page references
-        run: |
-          cd _site
-          grep -oE '(href|src)="[^"]+"' index.html \
-            | sed -E 's/.*="//; s/"$//' \
-            | grep -vE '^(https?:|mailto:|#)' \
-            | sort -u > /tmp/refs.txt
-          fail=0
-          while IFS= read -r ref; do
-            [ -n "$ref" ] || continue
-            target="${ref%%#*}"
-            if [ ! -e "$target" ] && [ ! -e "${target%/}/index.html" ]; then
-              echo "missing: $ref"
-              fail=1
-            fi
-          done < /tmp/refs.txt
-          if [ "$fail" -ne 0 ]; then
-            echo "The landing page references files that are not in the published site."
-            exit 1
-          fi
-          echo "landing page references resolve ($(wc -l < /tmp/refs.txt) checked)"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Assemble and exercise the deployment artifact
+        run: npm run test:site
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pages-verification
+          path: test-results/site/
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

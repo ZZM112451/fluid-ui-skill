@@ -1,5 +1,13 @@
 # 更新记录
 
+## 未发布 — Pages 交互恢复与发布证据勘误
+- Pages 产物包含实验台所需 core.mjs；统一站点组装脚本，校验嵌套页面和模块引用。
+- 新增部署子路径的真实交互及 390px / 1440px 图片、入口回归；部署前必须通过。
+- Playwright 报告移到 test-results，Release ZIP 解压后重新运行核心、引用与浏览器测试，再上传同一份工件。
+- 统一当前验证索引、在线入口、演示返回链接与 Crystal Motion 已验证边界。
+- 勘误 v1.2.0 标签 CI 浏览器数为 46（核心 32），记录 CI 包与最终 ZIP 的真实大小差异。
+- 保留 v1.2.0 标签及原 ZIP，修订后的 Release 文案见 docs/releases/v1.2.0.md；本提交不创建新版。
+
 ## 未发布 — 演示站与中文文档补齐
 - 新增 `site/` 演示首页与 `pages.yml` 工作流，把交互实验台、Crystal Motion 和 Liquid Glass v5 三个演示发布到 GitHub Pages，零运行时依赖。
 - 中文 README 补齐到与英文同等的章节：Crystal Motion、20 种模式、Liquid Glass v5、能力、安装、Codex 用法、架构、运行测试、限制与贡献；删除「1.2.0（候选发布）」等与已发布事实不符的措辞。

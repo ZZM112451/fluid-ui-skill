@@ -4,5 +4,5 @@ for(const name of ['codex','implicit']){const es=readFileSync(`.eval-work/${name
 mkdirSync('examples/codex-smoke',{recursive:true});for(const file of ['index.html','verify.cjs'])writeFileSync(`examples/codex-smoke/${file}`,clean(readFileSync(`.eval-work/codex/${file}`,'utf8')));
 for(const file of ['form-desktop.png','form-mobile.png','form-dark.png'])cpSync(`.eval-work/codex/${file}`,`docs/verification/screenshots/codex-${file}`);
 function scrub(value){if(typeof value==='string')return clean(value);if(Array.isArray(value))return value.map(scrub);if(value&&typeof value==='object')return Object.fromEntries(Object.entries(value).map(([k,v])=>[k,scrub(v)]));return value;}
-for(const path of ['docs/verification/browser-results.json']){writeFileSync(path,JSON.stringify(scrub(JSON.parse(readFileSync(path,'utf8'))),null,2));}
+for(const path of [process.argv[2]||'test-results/browser/results.json']){writeFileSync(path,JSON.stringify(scrub(JSON.parse(readFileSync(path,'utf8'))),null,2));}
 console.log('调用证据归档，已替换本机路径');

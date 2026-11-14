@@ -4,7 +4,7 @@
 
 ![Crystal Motion 视觉概念示意图，非浏览器实测截图](docs/images/crystal-motion-preview.svg)
 
-> **图片是视觉概念示意，不是浏览器实际截图。** 真实交互和材质渲染请看 [在线演示站](https://zzm112451.github.io/fluid-ui-skill/) 或本地运行 [Crystal Motion Web 演示](demo/crystal-motion/index.html)。
+> **图片是视觉概念示意，不是浏览器实际截图。** 真实交互和材质渲染请看 [在线演示站](https://zzm112451.github.io/fluid-ui-skill/) 或直接打开 [Crystal Motion Web 演示](https://zzm112451.github.io/fluid-ui-skill/demo/crystal-motion/)。
 
 **让界面拥有生命力。** Fluid UI 是面向 Codex 等编程 Agent 的可复用 UI 设计与交互增强 Skill，把克制的界面设计、有表现力但仍然无障碍的运动，以及可靠的状态驱动交互组合在一起。可选的 **Crystal Motion** 预设为全部 20 种交互模式提供近乎透明的液态玻璃、明亮的光学边缘、柔和 Aurora 背景与可中断的弹簧运动。
 
@@ -20,11 +20,11 @@ Fluid UI 帮助编程 Agent 保留既有设计系统、选择合适的视觉风�
 
 新增的 **Crystal Motion** Glass 预设提供近乎透明的光学表面、纤细的发光高光边缘、低模糊，以及保留速度、可中断的弹簧运动。它的 [实现契约](skills/fluid-ui/references/presets/crystal-motion.md) 把材质与运动语言映射到 **全部 20 种交互模式**，同时保留原有的四种风格与 Liquid Glass v5。
 
-- [可运行的 Crystal Motion 导航演示](demo/crystal-motion/index.html)：交互式 Web 参考，不是 20 个组件的组件库。
+- [可运行的 Crystal Motion 导航演示](https://zzm112451.github.io/fluid-ui-skill/demo/crystal-motion/)：交互式 Web 参考，不是 20 个组件的组件库。
 - [Crystal Motion 配置示例](skills/fluid-ui/assets/crystal-motion.config.json)
 - [落地与验证清单](skills/fluid-ui/references/crystal-motion-rollout.md)
 
-需要在需求中明确指定时使用 `style: "Glass", preset: "Crystal Motion"`。20 种模式的指导是完整的，但这不等于 20 种模式都已有单独实现并测试过的 Crystal Motion 组件，当前边界见验证清单。1.2.0 已正式发布：[版本包与 SHA256](https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.2.0)，证据见 [验证报告](docs/verification/report.md)。
+需要在需求中明确指定时使用 `style: "Glass", preset: "Crystal Motion"`。20 种模式的指导是完整的，但这不等于 20 种模式都已有单独实现并测试过的 Crystal Motion 组件，当前边界见验证清单。1.2.0 已正式发布：[版本包与 SHA256](https://github.com/ZZM112451/fluid-ui-skill/releases/tag/v1.2.0)，证据见 [验证报告](docs/verification/README.md)。
 
 ## 视觉图墙 — 20 种交互
 
@@ -35,9 +35,11 @@ Fluid UI 帮助编程 Agent 保留既有设计系统、选择合适的视觉风�
 
 **[查看全部 20 张示意图、验收要点与验证状态](docs/SHOWCASE.zh-CN.md)**。这些是概念示意图，不要据此声称已有 20 个可运行组件。
 
+已实现演示的实际浏览器画面见 [真实运行截图](docs/RUNTIME_SHOWCASE.md)，与上方概念图分别标注。
+
 ## Liquid Glass v5
 
-1.1.0 在 Glass 下新增了 **可选的** Liquid Glass 预设，保留原有四种风格与二十种模式。设计版本 v5 与 Skill 版本 1.1.0 是两条不同的版本轴。已确认的 [交付文档](fluid-ui-v5-handoff/ACCEPTANCE.md) 与 [可运行参考](fluid-ui-v5-handoff/index.html) 原样保留未修改；[工程演示](demo/liquid-glass/index.html) 在保留八种既定形变交互的前提下，补上了键盘、焦点、中断、真实剪贴板失败与响应式保护。
+1.1.0 在 Glass 下新增了 **可选的** Liquid Glass 预设，保留原有四种风格与二十种模式。设计版本 v5 与 Skill 版本 1.1.0 是两条不同的版本轴。已确认的 [交付文档](fluid-ui-v5-handoff/ACCEPTANCE.md) 与 [可运行参考](fluid-ui-v5-handoff/index.html) 原样保留未修改；[工程演示](https://zzm112451.github.io/fluid-ui-skill/demo/liquid-glass/) 在保留八种既定形变交互的前提下，补上了键盘、焦点、中断、真实剪贴板失败与响应式保护。
 
 先 `npm run dev`，再打开 `http://127.0.0.1:4173/demo/liquid-glass/`。配置写 `style: "Glass", preset: "Liquid Glass"`；Auto 不会把玻璃风格强加给无关的界面工作。另见 [配置](skills/fluid-ui/assets/liquid-glass.config.json)、[形变契约](skills/fluid-ui/references/morphing.md) 与 [1.1.0 验证](docs/verification/v1.1.0/report.md)。原生/移动端等价性尚未验证；外观菜单三项只表示选择状态，不是三套材质引擎。
 
@@ -52,7 +54,7 @@ Fluid UI 帮助编程 Agent 保留既有设计系统、选择合适的视觉风�
 
 ## 安装
 
-仓库就是权威分发源：[ZZM112451/fluid-ui-skill](https://github.com/ZZM112451/fluid-ui-skill)。发布状态与证据记录在 [验证页](docs/verification/report.md)，单凭一个网址不代表已经发布。
+仓库就是权威分发源：[ZZM112451/fluid-ui-skill](https://github.com/ZZM112451/fluid-ui-skill)。发布状态与证据记录在 [验证页](docs/verification/README.md)，单凭一个网址不代表已经发布。
 
 克隆仓库、审阅脚本，然后用 Node.js 22+ 运行：
 
@@ -98,12 +100,14 @@ npm test
 npm run validate
 npx playwright install chromium
 npm run test:web
+npm run test:site
 npm audit
 npm run scan
 npm run package
+npm run test:package
 ```
 
-已有本地 Chromium 时可把 `FLUID_CHROMIUM` 指向它的可执行文件。[验证报告](docs/verification/report.md) 区分结构、执行、视觉检查、宿主调用与未验证平台；[对照研究](docs/verification/comparison.md) 保留五个基线/增强任务与一个有代表性的既有项目试装，不承诺普适提升。`npm run package` 生成 `dist/` 下的 ZIP 与 SHA256SUMS；打 tag 推送后由发布工作流上传附件。
+已有本地 Chromium 时可把 `FLUID_CHROMIUM` 指向它的可执行文件。[验证报告](docs/verification/README.md) 区分结构、执行、视觉检查、宿主调用与未验证平台；[对照研究](docs/verification/comparison.md) 保留五个基线/增强任务与一个有代表性的既有项目试装，不承诺普适提升。`npm run package` 生成 `dist/` 下的 ZIP 与 SHA256SUMS；打 tag 推送后由发布工作流上传附件。
 
 ## 限制与贡献
 

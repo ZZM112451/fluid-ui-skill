@@ -1,6 +1,6 @@
 # Crystal Motion — 20 Interaction Showcase
 
-[English](../README.md) · [简体中文](SHOWCASE.zh-CN.md) · [Interactive Web reference](../demo/crystal-motion/index.html)
+[English](../README.md) · [简体中文](SHOWCASE.zh-CN.md) · [Interactive Web reference](https://zzm112451.github.io/fluid-ui-skill/demo/crystal-motion/)
 
 > **Important:** The following SVG images are **individual conceptual illustrations**, not screenshots of 20 running implementations. They show intended appearance only. A visual illustration is not evidence that an interaction works.
 
@@ -11,7 +11,7 @@ The existing Skill includes 20 interaction specifications. Crystal Motion adds m
 | 1 | [Theme Reveal](../skills/fluid-ui/references/patterns/theme-reveal.md) | ![Theme Reveal concept](images/patterns/theme-reveal.svg) | Bidirectional theme, cancel, reduced motion | Crystal Motion implementation not verified |
 | 2 | [Floating Timer Pill](../skills/fluid-ui/references/patterns/floating-timer-pill.md) | ![Floating Timer Pill concept](images/patterns/floating-timer-pill.svg) | Timer continuity, pause, background resume | Crystal Motion implementation not verified |
 | 3 | [Adaptive Step Sheet](../skills/fluid-ui/references/patterns/adaptive-step-sheet.md) | ![Adaptive Step Sheet concept](images/patterns/adaptive-step-sheet.svg) | Validation, keyboard and focus restoration | Crystal Motion implementation not verified |
-| 4 | [Fluid Bottom Navigation](../skills/fluid-ui/references/patterns/fluid-bottom-navigation.md) | ![Fluid Bottom Navigation concept](images/patterns/fluid-bottom-navigation.svg) | Rapid reversal, drag, keyboard and shared lens | Automated test added; execution pending |
+| 4 | [Fluid Bottom Navigation](../skills/fluid-ui/references/patterns/fluid-bottom-navigation.md) | ![Fluid Bottom Navigation concept](images/patterns/fluid-bottom-navigation.svg) | Rapid reversal, drag, keyboard and shared lens | Browser automation 5/5 passed on Ubuntu and Windows; devices unverified ([v1.2.0 evidence](verification/v1.2.0/publication-report-v1.2.0.zh-CN.md)) |
 | 5 | [Scroll-aware FAB](../skills/fluid-ui/references/patterns/scroll-aware-fab.md) | ![Scroll-aware FAB concept](images/patterns/scroll-aware-fab.svg) | Scroll thresholds and persistent action target | Crystal Motion implementation not verified |
 | 6 | [Copy Success Feedback](../skills/fluid-ui/references/patterns/copy-success-feedback.md) | ![Copy Success Feedback concept](images/patterns/copy-success-feedback.svg) | Clipboard success/failure and stale promises | Crystal Motion implementation not verified |
 | 7 | [Animated Form Validation](../skills/fluid-ui/references/patterns/animated-form-validation.md) | ![Animated Form Validation concept](images/patterns/animated-form-validation.svg) | Error semantics and recovery | Crystal Motion implementation not verified |
